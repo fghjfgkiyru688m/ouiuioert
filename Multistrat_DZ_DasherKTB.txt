@@ -1,0 +1,1196 @@
+repeat wait() until game:IsLoaded()
+getgenv().IsMultiStrat = true
+getgenv().Debug = true
+
+getgenv().Maps = {["Cyber City"] = {"Commander", "Ranger", "Accelerator", "Electroshocker", "Farm"},["Crossroads"] = {"Commander", "Ranger", "Accelerator", "Electroshocker", "Farm"},["Deserted Village"] = {"Commander", "Ranger", "Accelerator", "Electroshocker", "Farm"},["Grass Isle"] = {"Commander", "Ranger", "Accelerator", "Electroshocker", "Farm"},["Night Station"] = {"Farm", "Commander", "Soldier", "Shotgunner", "DJ Booth"},["Toyboard"]={"Commander", "Ranger", "Accelerator", "Electroshocker", "Farm"}}--Enter the correct info. Map, then units. If no unit in slot, write, "nil" Follow format to add more maps
+maplist = {"Cyber City","Crossroads","Deserted Village","Grass Isle","Night Station","Toyboard"}
+
+if game.PlaceId == 3260590327 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/banbuskox/dfhtyxvzexrxgfdzgzfdvfdz/main/ckmhjvskfkmsStratFun2", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/banbuskox/dfhtyxvzexrxgfdzgzfdvfdz/main/asjhxnjfdStratFunJoin", true))()
+end
+
+if game.PlaceId == 5591597781 then
+    map = game:GetService("ReplicatedStorage").State.Map.Value
+    game:GetService("Players").PlayerAdded:Connect(function() --back to lobby if it detected player join the game
+        game:GetService("TeleportService"):Teleport(3260590327)
+        wait(10)
+    end)
+    for i,v in pairs(game:GetService("Players"):GetPlayers()) do --back to lobby if there is more than 1 player
+        if i==2 then
+            game:GetService("TeleportService"):Teleport(3260590327)
+            wait(10)
+        end
+    end
+    if not table.find(maplist,map) then --back to lobby in case you joined wrong map
+        game:GetService("TeleportService"):Teleport(3260590327)
+        return
+    end
+    if map == maplist[1] then
+print([[
+
+--> 1. Tested with Synapse and didn't get any bugs. If you find any let me know on discord.
+--> 2. Make sure to give this strat a thumbs up if you enjoy it!
+Strat by:  		DZ_DasherKTB
+MultiStrat by:  	DZ_DasherKTB
+]])
+local TDS = loadstring(game:HttpGet("https://raw.githubusercontent.com/wxzex/mmsautostratcontinuation/main/autostratscode.txt", true))() 
+TDS:Loadout("Commander", "Ranger", "Accelerator", "Electroshocker", "Farm") 
+TDS:Map("Cyber City", true, "Survival")
+TDS:Mode('Normal')
+task.spawn(function()
+    wait(1)
+    for i,v in pairs(game.CoreGui:GetDescendants()) do
+        if v:IsA("TextLabel") and v.Name == "section_lbl" and v.Text == "" then
+            v.Text = "Strat By: DZ_DasherKTB"
+        end
+    end
+end)
+    TDS:Skip(1, 0, 39.1, false)
+    TDS:Place('Electroshocker', 15.953509330749512, 0.7886896133422852, -0.55517578125, 2, 0, 58.4, false, 0, 0, 0, false)
+    TDS:Place('Farm', 21.867435455322266, 0.7886900901794434, -12.796127319335938, 3, 0, 57.4, false, 0, 0, 0, false)
+    TDS:Upgrade(2, 3, 0, 4.2, true)
+    TDS:Place('Farm', 16.632266998291016, 0.7886800765991211, -12.768474578857422, 3, 0, 1.1, false, 0, 0, 0, true)
+    TDS:Upgrade(3, 4, 0, 57.6, false)
+    TDS:Place('Farm', 19.36819839477539, 0.7886834144592285, -9.188953399658203, 4, 0, 2.6, false, 0, 0, 0, true)
+    TDS:Upgrade(4, 5, 1, 0.1, false)
+    TDS:Upgrade(2, 5, 0, 2.1, true)
+    TDS:Upgrade(1, 6, 0, 58.4, false)
+    TDS:Upgrade(3, 6, 0, 54.6, false)
+    TDS:Upgrade(4, 6, 0, 3.3, true)
+    TDS:Place('Farm', 21.958663940429688, 0.7153210639953613, -16.395408630371094, 7, 0, 56.3, false, 0, 0, 0, false)
+    TDS:Upgrade(5, 7, 0, 54.1, false)
+    TDS:Upgrade(5, 7, 0, 4.3, true)
+    TDS:Place('Farm', 17.452434539794922, 0.7161431312561035, -17.30252456665039, 7, 0, 1.1, false, 0, 0, 0, true)
+    TDS:Upgrade(6, 8, 1, 0.2, false)
+    TDS:Upgrade(1, 8, 0, 51.4, false)
+    TDS:Upgrade(6, 8, 0, 4.5, true)
+    TDS:Place('Farm', 13.622137069702148, 0.7161698341369629, -16.888633728027344, 8, 0, 2.4, false, 0, 0, 0, true)
+    TDS:Upgrade(7, 9, 0, 59.5, false)
+    TDS:Upgrade(7, 9, 0, 58.4, false)
+    TDS:Place('Electroshocker', 8.662309646606445, 0.7886924743652344, 1.4484310150146484, 10, 0, 52.4, false, 0, 0, 0, false)
+    TDS:Upgrade(8, 10, 0, 50.0, false)
+    TDS:Upgrade(8, 10, 0, 49.1, false)
+    TDS:Upgrade(4, 10, 0, 45.3, false)
+    TDS:Skip(10, 0, 39.5, false)
+    TDS:Upgrade(3, 10, 0, 2.2, true)
+    TDS:Upgrade(2, 11, 0, 58.4, false)
+    TDS:Place('Accelerator', -10.122285842895508, 1.2886995077133179, 3.0349342823028564, 12, 1, 0.7, false, 0, 0, 0, false)
+    TDS:Skip(12, 0, 39.6, false)
+    TDS:Upgrade(5, 12, 0, 4.3, true)
+    TDS:Upgrade(9, 13, 0, 49.0, false)
+    TDS:Upgrade(9, 13, 0, 49.6, false)
+    TDS:Upgrade(6, 13, 0, 5.2, true)
+    TDS:Upgrade(7, 13, 0, 3.2, true)
+    TDS:Place('Electroshocker', 8.830669403076172, 0.7886977195739746, 4.591869354248047, 14, 0, 57.1, false, 0, 0, 0, false)
+    TDS:Upgrade(10, 14, 0, 55.4, false)
+    TDS:Upgrade(10, 14, 0, 53.7, false)
+    TDS:Place('Electroshocker', 15.873915672302246, 0.7886853218078613, -3.6014404296875, 14, 0, 47.5, false, 0, 0, 0, false)
+    TDS:Upgrade(11, 14, 0, 45.4, false)
+    TDS:Skip(14, 0, 39.5, false)
+    TDS:Upgrade(11, 14, 0, 4.4, true)
+    TDS:Place('Farm', 22.224361419677734, 0.7159295082092285, -20.765220642089844, 15, 0, 58.5, false, 0, 0, 0, false)
+    TDS:Upgrade(9, 15, 0, 54.2, false)
+    TDS:Upgrade(12, 15, 0, 50.3, false)
+    TDS:Skip(15, 0, 39.3, false)
+    TDS:Upgrade(12, 15, 0, 4.4, true)
+    TDS:Upgrade(12, 15, 0, 2.3, true)
+    TDS:Place('Farm', 17.806434631347656, 0.7159099578857422, -20.957416534423828, 16, 0, 4.4, false, 0, 0, 0, true)
+    TDS:Upgrade(13, 16, 0, 2.0, true)
+    TDS:Upgrade(13, 16, 0, 1.1, true)
+    TDS:Upgrade(13, 17, 0, 59.0, false)
+    TDS:Upgrade(13, 17, 0, 4.5, true)
+    TDS:Upgrade(13, 17, 0, 3.1, true)
+    TDS:Upgrade(13, 17, 0, 3.2, true)
+    TDS:Upgrade(13, 17, 0, 3.3, true)
+    TDS:Upgrade(13, 17, 0, 3.4, true)
+    TDS:Upgrade(7, 18, 0, 56.3, false)
+    TDS:Upgrade(7, 18, 0, 4.7, true)
+    TDS:Upgrade(6, 19, 0, 58.2, false)
+    TDS:Skip(19, 0, 39.6, false)
+    TDS:Upgrade(6, 19, 0, 4.6, true)
+    TDS:Upgrade(8, 20, 0, 59.2, false)
+    TDS:Upgrade(10, 20, 0, 56.4, false)
+    TDS:Upgrade(12, 20, 0, 43.5, false)
+    TDS:Skip(20, 0, 39.3, false)
+    TDS:Upgrade(12, 21, 0, 59.2, false)
+    TDS:Upgrade(11, 21, 0, 55.2, false)
+    TDS:Upgrade(5, 21, 0, 4.2, true)
+    TDS:Upgrade(5, 22, 0, 59.2, false)
+    TDS:Upgrade(3, 22, 0, 43.4, false)
+    TDS:Skip(22, 0, 38.4, false)
+    TDS:Upgrade(9, 23, 0, 58.5, false)
+    TDS:Upgrade(3, 23, 0, 45.3, false)
+    TDS:Skip(23, 0, 37.6, false)
+    TDS:Upgrade(2, 23, 0, 2.4, true)
+    TDS:Upgrade(2, 24, 0, 59.1, false)
+    TDS:Upgrade(4, 24, 0, 57.3, false)
+    TDS:Upgrade(4, 24, 0, 49.0, false)
+    TDS:Upgrade(1, 25, 1, 0.0, true)
+    TDS:Upgrade(1, 25, 0, 55.6, false)
+    TDS:Upgrade(11, 25, 0, 48.2, false)
+    TDS:Upgrade(8, 25, 0, 2.3, true)
+    TDS:Upgrade(10, 26, 0, 58.4, false)
+    TDS:Upgrade(1, 27, 0, 59.1, false)
+    TDS:Upgrade(11, 27, 0, 4.7, true)
+    TDS:Upgrade(8, 28, 0, 53.1, false)
+    TDS:Upgrade(10, 29, 0, 59.3, false)
+    TDS:Upgrade(9, 31, 1, 20.5, false)
+    TDS:Place('Accelerator', -10.165975570678711, 1.2886995077133179, -0.1630573272705078, 31, 1, 7.3, false, 0, 0, 0, false)
+    TDS:Upgrade(14, 31, 1, 4.4, false)
+    TDS:Upgrade(14, 31, 1, 2.6, false)
+    TDS:Upgrade(14, 31, 0, 59.3, false)
+    TDS:Upgrade(14, 31, 0, 55.4, false)
+    TDS:Upgrade(14, 33, 1, 16.5, false)
+    TDS:Place('Accelerator', -12.958942413330078, 1.2886995077133179, 1.3585882186889648, 33, 0, 55.0, false, 0, 0, 0, false)
+    TDS:Upgrade(15, 33, 0, 4.0, true)
+    TDS:Upgrade(15, 33, 0, 1.0, true)
+    TDS:Upgrade(15, 34, 1, 19.2, false)
+    TDS:Upgrade(15, 34, 1, 16.4, false)
+    TDS:Upgrade(15, 35, 1, 20.4, false)
+    TDS:Place('Accelerator', -12.767234802246094, 1.2886995077133179, 4.526007652282715, 36, 1, 14.3, false, 0, 0, 0, false)
+    TDS:Upgrade(16, 36, 1, 11.4, false)
+    TDS:Upgrade(16, 36, 1, 8.3, false)
+    TDS:Upgrade(16, 36, 1, 4.2, false)
+    TDS:Upgrade(16, 36, 1, 0.5, false)
+    TDS:Skip(36, 0, 52.4, false)
+    TDS:Upgrade(16, 37, 1, 4.1, false)
+    TDS:Place('Accelerator', -10.100391387939453, 1.2886995077133179, 6.334564208984375, 37, 0, 39.5, false, 0, 0, 0, false)
+    TDS:Upgrade(17, 37, 0, 34.3, false)
+    TDS:Skip(37, 0, 33.3, false)
+    TDS:Upgrade(17, 37, 0, 4.5, true)
+    TDS:Upgrade(17, 38, 1, 20.5, false)
+    TDS:Upgrade(17, 38, 1, 16.4, false)
+    TDS:Skip(38, 0, 51.0, false)
+    TDS:Upgrade(17, 39, 1, 19.0, false)
+    TDS:Place('Accelerator', -7.126125335693359, 1.2886995077133179, 0.8621397018432617, 39, 1, 2.3, false, 0, 0, 0, false)
+    TDS:Upgrade(18, 39, 0, 51.1, false)
+    TDS:Upgrade(18, 39, 0, 48.1, false)
+    TDS:Upgrade(18, 39, 0, 44.3, false)
+    TDS:Upgrade(18, 39, 0, 39.2, false)
+    TDS:Skip(39, 0, 36.4, false)
+    TDS:Upgrade(18, 40, 99, 58.3, false)
+    TDS:Place('Accelerator', -7.3165435791015625, 1.2886995077133179, 4.837172508239746, 40, 99, 41.6, false, 0, 0, 0, false)
+    TDS:Upgrade(19, 40, 99, 38.5, false)
+    TDS:Upgrade(19, 40, 99, 34.1, false)
+    TDS:Upgrade(19, 40, 99, 31.5, false)
+    TDS:Upgrade(19, 40, 99, 23.5, false)
+    end
+    if map == maplist[2] then
+print([[
+
+--> 1. Tested with Synapse and didn't get any bugs. If you find any let me know on discord.
+--> 2. Make sure to give this strat a thumbs up if you enjoy it!
+Strat by:  		DZ_DasherKTB
+MultiStrat by:  		DZ_DasherKTB
+]])
+local TDS = loadstring(game:HttpGet("https://raw.githubusercontent.com/wxzex/mmsautostratcontinuation/main/autostratscode.txt", true))() 
+TDS:Loadout("Commander", "Ranger", "Accelerator", "Electroshocker", "Farm") 
+TDS:Map("Crossroads", true, "Survival")
+TDS:Mode('Normal')
+task.spawn(function()
+    wait(1)
+    for i,v in pairs(game.CoreGui:GetDescendants()) do
+        if v:IsA("TextLabel") and v.Name == "section_lbl" and v.Text == "" then
+            v.Text = "Strat By: DZ_DasherKTB"
+        end
+    end
+end)
+    TDS:Skip(1, 0, 39.2, false)
+    TDS:Place('Electroshocker', 3.0338926315307617, 0.9999995231628418, 3.0400867462158203, 2, 0, 56.6, false, 0, 0, 0, false)
+    TDS:Skip(2, 0, 39.6, false)
+    TDS:Place('Farm', -7.685697555541992, 1.0000081062316895, -11.173540115356445, 2, 0, 2.5, false, 0, 0, 0, true)
+    TDS:Upgrade(2, 3, 0, 58.0, false)
+    TDS:Skip(3, 0, 38.1, false)
+    TDS:Place('Farm', -7.540554046630859, 1.0000081062316895, -7.293996810913086, 3, 0, 3.8, false, 0, 0, 0, true)
+    TDS:Upgrade(3, 4, 0, 56.6, false)
+    TDS:Skip(4, 0, 39.5, false)
+    TDS:Upgrade(3, 4, 0, 3.1, true)
+    TDS:Upgrade(1, 5, 0, 52.5, false)
+    TDS:Upgrade(2, 5, 0, 3.4, true)
+    TDS:Place('Farm', -11.33439826965332, 1.0000081062316895, -9.877731323242188, 6, 0, 57.7, false, 0, 0, 0, false)
+    TDS:Upgrade(4, 6, 0, 54.0, false)
+    TDS:Upgrade(4, 6, 0, 4.8, true)
+    TDS:Place('Farm', -11.15721607208252, 1.0000081062316895, -5.373292922973633, 6, 0, 1.0, false, 0, 0, 0, true)
+    TDS:Upgrade(5, 7, 0, 58.1, false)
+    TDS:Upgrade(5, 7, 0, 57.4, false)
+    TDS:Skip(7, 0, 38.1, false)
+    TDS:Place('Farm', -15.28386116027832, 1.0000081062316895, -8.433013916015625, 7, 0, 3.5, false, 0, 0, 0, true)
+    TDS:Upgrade(6, 7, 0, 1.5, true)
+    TDS:Upgrade(6, 8, 0, 59.2, false)
+    TDS:Skip(8, 0, 38.5, false)
+    TDS:Upgrade(2, 8, 0, 4.5, true)
+    TDS:Place('Farm', -15.23263931274414, 1.0000081062316895, -4.810728073120117, 8, 0, 2.6, false, 0, 0, 0, true)
+    TDS:Upgrade(3, 9, 0, 57.3, false)
+    TDS:Upgrade(4, 9, 0, 55.3, false)
+    TDS:Skip(9, 0, 39.7, false)
+    TDS:Upgrade(7, 9, 0, 4.1, true)
+    TDS:Upgrade(7, 9, 0, 3.3, true)
+    TDS:Place('Farm', -19.113201141357422, 1.0000081062316895, -8.858245849609375, 10, 0, 54.2, false, 0, 0, 0, false)
+    TDS:Upgrade(8, 10, 0, 52.0, false)
+    TDS:Upgrade(8, 10, 0, 51.5, false)
+    TDS:Upgrade(8, 10, 0, 49.1, false)
+    TDS:Place('Farm', -19.18157958984375, 1.0000081062316895, -5.027170181274414, 10, 0, 44.4, false, 0, 0, 0, false)
+    TDS:Upgrade(9, 10, 0, 42.6, false)
+    TDS:Skip(10, 0, 39.6, false)
+    TDS:Upgrade(9, 10, 0, 3.3, true)
+    TDS:Skip(11, 0, 39.1, false)
+    TDS:Place('Accelerator', 9.310275077819824, 0.9999985694885254, 9.854265213012695, 11, 0, 1.3, false, 0, 0, 0, true)
+    TDS:Upgrade(10, 12, 0, 58.2, false)
+    TDS:Upgrade(10, 12, 0, 57.2, false)
+    TDS:Upgrade(9, 12, 0, 50.2, false)
+    TDS:Skip(12, 0, 39.7, false)
+    TDS:Upgrade(7, 12, 0, 3.1, true)
+    TDS:Upgrade(6, 13, 0, 59.2, false)
+    TDS:Upgrade(5, 13, 0, 57.4, false)
+    TDS:Upgrade(2, 13, 0, 3.3, true)
+    TDS:Upgrade(10, 14, 1, 0.3, false)
+    TDS:Upgrade(1, 14, 0, 53.1, false)
+    TDS:Skip(14, 0, 39.5, false)
+    TDS:Upgrade(3, 15, 1, 0.0, true)
+    TDS:Skip(15, 0, 5.1, false)
+    TDS:Upgrade(3, 15, 0, 4.6, true)
+    TDS:Upgrade(2, 16, 0, 59.5, false)
+    TDS:Upgrade(4, 16, 0, 4.7, true)
+    TDS:Upgrade(4, 17, 0, 59.3, false)
+    TDS:Skip(17, 0, 39.2, false)
+    TDS:Upgrade(5, 17, 0, 4.5, true)
+    TDS:Upgrade(5, 18, 1, 0.5, false)
+    TDS:Upgrade(6, 18, 0, 53.1, false)
+    TDS:Skip(18, 0, 38.5, false)
+    TDS:Upgrade(6, 19, 1, 0.6, false)
+    TDS:Upgrade(7, 19, 0, 54.7, false)
+    TDS:Skip(19, 0, 38.0, false)
+    TDS:Upgrade(7, 19, 0, 4.2, true)
+    TDS:Upgrade(10, 20, 0, 57.2, false)
+    TDS:Upgrade(8, 20, 0, 4.3, true)
+    TDS:Upgrade(8, 21, 1, 0.4, false)
+    TDS:Upgrade(9, 21, 0, 57.3, false)
+    TDS:Skip(21, 0, 39.4, false)
+    TDS:Upgrade(9, 21, 0, 4.2, true)
+    TDS:Upgrade(1, 22, 0, 53.3, false)
+    TDS:Upgrade(1, 22, 0, 51.0, false)
+    TDS:Skip(22, 0, 37.3, false)
+    TDS:Upgrade(1, 23, 0, 59.3, false)
+    TDS:Place('Accelerator', 6.003050804138184, 0.9999980926513672, 9.748401641845703, 23, 0, 44.2, false, 0, 0, 0, false)
+    TDS:Upgrade(11, 23, 0, 42.2, false)
+    TDS:Upgrade(11, 23, 0, 41.4, false)
+    TDS:Skip(23, 0, 37.4, false)
+    TDS:Upgrade(11, 23, 0, 4.4, true)
+    TDS:Upgrade(11, 24, 0, 59.4, false)
+    TDS:Place('Accelerator', 7.656811714172363, 0.9999990463256836, 6.966622352600098, 25, 0, 55.4, false, 0, 0, 0, false)
+    TDS:Upgrade(12, 25, 0, 53.3, false)
+    TDS:Upgrade(12, 25, 0, 51.1, false)
+    TDS:Upgrade(12, 25, 0, 49.1, false)
+    TDS:Upgrade(12, 25, 0, 48.3, false)
+    TDS:Place('Electroshocker', 3.320741653442383, 1.0000040531158447, -23.436418533325195, 25, 0, 4.2, false, 0, 0, 0, true)
+    TDS:Upgrade(13, 25, 0, 1.3, true)
+    TDS:Upgrade(13, 26, 0, 59.3, false)
+    TDS:Upgrade(13, 26, 0, 55.0, false)
+    TDS:Upgrade(13, 26, 0, 52.0, false)
+    TDS:Upgrade(13, 27, 1, 0.4, false)
+    TDS:Skip(27, 0, 38.4, false)
+    TDS:Place('Accelerator', 7.627528190612793, 0.9999985694885254, 12.567630767822266, 28, 0, 58.5, false, 0, 0, 0, false)
+    TDS:Upgrade(14, 28, 0, 53.4, false)
+    TDS:Upgrade(14, 28, 0, 50.2, false)
+    TDS:Upgrade(14, 28, 0, 50.4, false)
+    TDS:Upgrade(14, 28, 0, 50.6, false)
+    TDS:Skip(28, 0, 37.6, false)
+    TDS:Place('Accelerator', 4.462306022644043, 0.9999990463256836, 6.9283552169799805, 29, 0, 52.1, false, 0, 0, 0, false)
+    TDS:Upgrade(15, 29, 0, 48.6, false)
+    TDS:Upgrade(15, 29, 0, 47.6, false)
+    TDS:Upgrade(15, 29, 0, 45.3, false)
+    TDS:Upgrade(15, 29, 0, 41.4, false)
+    TDS:Skip(29, 0, 33.0, false)
+    TDS:Skip(30, 0, 52.4, false)
+    TDS:Upgrade(15, 31, 1, 20.5, false)
+    TDS:Place('Electroshocker', 3.5642452239990234, 1.0000035762786865, -20.272829055786133, 31, 1, 6.1, false, 0, 0, 0, false)
+    TDS:Upgrade(16, 31, 1, 4.3, false)
+    TDS:Upgrade(16, 31, 1, 4.5, false)
+    TDS:Upgrade(16, 31, 1, 3.1, false)
+    TDS:Upgrade(16, 31, 1, 3.3, false)
+    TDS:Skip(31, 0, 52.1, false)
+    TDS:Upgrade(16, 31, 0, 2.5, true)
+    TDS:Place('Electroshocker', 3.3737125396728516, 1.0000030994415283, -17.063335418701172, 32, 1, 11.5, false, 0, 0, 0, false)
+    TDS:Upgrade(17, 32, 1, 8.2, false)
+    TDS:Upgrade(17, 32, 1, 6.4, false)
+    TDS:Upgrade(17, 32, 1, 4.1, false)
+    TDS:Upgrade(17, 32, 1, 2.2, false)
+    TDS:Skip(32, 0, 52.0, false)
+    TDS:Upgrade(17, 33, 1, 20.6, false)
+    TDS:Skip(33, 0, 50.5, false)
+    TDS:Upgrade(11, 34, 1, 20.4, false)
+    TDS:Upgrade(12, 35, 1, 19.5, false)
+    TDS:Skip(36, 0, 48.1, false)
+    TDS:Upgrade(10, 37, 1, 17.5, false)
+    TDS:Skip(37, 0, 47.8, false)
+    TDS:Upgrade(14, 38, 1, 20.5, false)
+    TDS:Skip(38, 0, 50.3, false)
+    TDS:Place('Accelerator', 10.860057830810547, 0.9999990463256836, 7.102533340454102, 39, 1, 14.4, false, 0, 0, 0, false)
+    TDS:Upgrade(18, 39, 1, 11.0, false)
+    TDS:Upgrade(18, 39, 1, 10.5, false)
+    TDS:Upgrade(18, 39, 1, 8.5, false)
+    TDS:Upgrade(18, 39, 1, 6.4, false)
+    TDS:Upgrade(18, 39, 1, 3.5, false)
+    TDS:Skip(39, 0, 52.6, false)
+    end
+   if map == maplist[3] then
+print([[
+
+--> 1. Tested with Synapse and didn't get any bugs. If you find any let me know on discord.
+--> 2. Make sure to give this strat a thumbs up if you enjoy it!
+Strat by:  		DZ_DasherKTB
+MultiStrat by:  		DZ_DasherKTB
+]])
+local TDS = loadstring(game:HttpGet("https://raw.githubusercontent.com/wxzex/mmsautostratcontinuation/main/autostratscode.txt", true))() 
+TDS:Loadout("Commander", "Ranger", "Accelerator", "Electroshocker", "Farm") 
+TDS:Map("Deserted Village", true, "Survival")
+TDS:Mode('Normal')
+task.spawn(function()
+     wait(1)
+    for i,v in pairs(game.CoreGui:GetDescendants()) do
+        if v:IsA("TextLabel") and v.Name == "section_lbl" and v.Text == "" then
+            v.Text = "Strat By: DZ_DasherKTB"
+        end
+    end
+end)
+    TDS:Skip(1, 0, 39.3, false)
+    TDS:Place('Electroshocker', -34.12638854980469, 1.000005841255188, 1.9623470306396484, 1, 0, 2.3, false, 0, 0, 0, true)
+    TDS:Place('Farm', -42.76020812988281, 1.000005841255188, 15.701300621032715, 2, 0, 3.4, false, 0, 0, 0, true)
+    TDS:Upgrade(2, 3, 1, 0.7, false)
+    TDS:Place('Farm', -39.05530548095703, 1.000005841255188, 15.481547355651855, 3, 0, 2.4, false, 0, 0, 0, true)
+    TDS:Upgrade(3, 3, 0, 1.5, true)
+    TDS:Upgrade(3, 4, 0, 3.2, true)
+    TDS:Upgrade(1, 5, 0, 59.3, false)
+    TDS:Upgrade(2, 5, 0, 2.1, true)
+    TDS:Place('Farm', -35.324851989746094, 1.000005841255188, 15.249261856079102, 6, 0, 55.4, false, 0, 0, 0, false)
+    TDS:Upgrade(4, 6, 0, 53.4, false)
+    TDS:Upgrade(4, 6, 0, 4.5, true)
+    TDS:Place('Farm', -46.38511276245117, 1.000005841255188, 15.816521644592285, 7, 0, 58.4, false, 0, 0, 0, false)
+    TDS:Upgrade(5, 7, 0, 55.5, false)
+    TDS:Upgrade(5, 7, 0, 54.7, false)
+    TDS:Place('Farm', -35.281986236572266, 1.000005841255188, 11.475631713867188, 7, 0, 2.4, false, 0, 0, 0, true)
+    TDS:Upgrade(6, 7, 0, 1.7, true)
+    TDS:Upgrade(6, 8, 1, 0.3, false)
+    TDS:Place('Electroshocker', -40.10367202758789, 1.000005841255188, 4.002918243408203, 8, 0, 52.4, false, 0, 0, 0, false)
+    TDS:Place('Farm', -39.180477142333984, 1.000005841255188, 11.285080909729004, 8, 0, 1.0, false, 0, 0, 0, true)
+    TDS:Upgrade(7, 9, 0, 58.4, false)
+    TDS:Upgrade(8, 9, 0, 55.4, false)
+    TDS:Upgrade(8, 9, 0, 53.5, false)
+    TDS:Place('Farm', -42.845481872558594, 1.000005841255188, 11.096741676330566, 9, 0, 49.5, false, 0, 0, 0, false)
+    TDS:Upgrade(9, 9, 0, 47.0, false)
+    TDS:Upgrade(9, 9, 0, 4.2, true)
+    TDS:Upgrade(1, 10, 1, 0.4, false)
+    TDS:Upgrade(7, 10, 0, 58.6, false)
+    TDS:Place('Farm', -46.84654235839844, 1.000005841255188, 11.297236442565918, 10, 0, 50.0, false, 0, 0, 0, false)
+    TDS:Upgrade(10, 10, 0, 46.1, false)
+    TDS:Skip(10, 0, 36.2, false)
+    TDS:Upgrade(10, 10, 0, 3.1, true)
+    TDS:Upgrade(10, 11, 0, 57.3, false)
+    TDS:Place('Accelerator', -12.63458251953125, 1.000005841255188, -9.860021591186523, 12, 0, 58.8, false, 0, 0, 0, false)
+    TDS:Upgrade(11, 12, 0, 55.4, false)
+    TDS:Skip(12, 0, 38.7, false)
+    TDS:Upgrade(9, 12, 0, 4.7, true)
+    TDS:Upgrade(11, 13, 0, 59.5, false)
+    TDS:Upgrade(8, 13, 0, 54.0, false)
+    TDS:Upgrade(6, 13, 0, 4.4, true)
+    TDS:Upgrade(5, 13, 0, 2.2, true)
+    TDS:Place('Electroshocker', -30.67949867248535, 1.000005841255188, -4.539953231811523, 14, 0, 54.3, false, 0, 0, 0, false)
+    TDS:Upgrade(12, 14, 0, 51.0, false)
+    TDS:Upgrade(12, 14, 0, 48.6, false)
+    TDS:Upgrade(2, 14, 0, 42.3, false)
+    TDS:Upgrade(3, 14, 0, 3.0, true)
+    TDS:Upgrade(4, 15, 1, 0.5, false)
+    TDS:Upgrade(1, 15, 0, 57.4, false)
+    TDS:Skip(15, 0, 39.6, false)
+    TDS:Place('Electroshocker', -39.929962158203125, 1.000005841255188, 0.7013158798217773, 16, 1, 0.6, false, 0, 0, 0, false)
+    TDS:Upgrade(13, 16, 0, 56.3, false)
+    TDS:Upgrade(13, 16, 0, 55.3, false)
+    TDS:Upgrade(13, 16, 0, 53.5, false)
+    TDS:Upgrade(11, 17, 1, 0.7, false)
+    TDS:Upgrade(7, 17, 0, 55.4, false)
+    TDS:Upgrade(10, 18, 1, 0.4, false)
+    TDS:Upgrade(10, 18, 0, 4.6, true)
+    TDS:Upgrade(12, 19, 1, 0.6, false)
+    TDS:Upgrade(9, 19, 0, 53.1, false)
+    TDS:Skip(19, 0, 39.7, false)
+    TDS:Upgrade(9, 20, 1, 0.6, false)
+    TDS:Upgrade(8, 20, 0, 50.0, false)
+    TDS:Upgrade(8, 21, 1, 0.6, false)
+    TDS:Upgrade(6, 21, 0, 47.2, false)
+    TDS:Upgrade(1, 22, 1, 0.4, false)
+    TDS:Upgrade(6, 22, 0, 53.2, false)
+    TDS:Skip(22, 0, 39.5, false)
+    TDS:Upgrade(7, 23, 0, 59.0, false)
+    TDS:Upgrade(13, 23, 0, 57.6, false)
+    TDS:Upgrade(5, 23, 0, 51.3, false)
+    TDS:Skip(23, 0, 39.6, false)
+    TDS:Upgrade(5, 24, 0, 0.0, true)
+    TDS:Upgrade(2, 24, 0, 57.3, false)
+    TDS:Upgrade(2, 24, 0, 55.0, false)
+    TDS:Skip(24, 0, 37.3, false)
+    TDS:Upgrade(3, 24, 0, 4.6, true)
+    TDS:Upgrade(3, 25, 1, 0.4, false)
+    TDS:Upgrade(4, 25, 0, 58.4, false)
+    TDS:Upgrade(4, 25, 0, 56.3, false)
+    TDS:Upgrade(1, 26, 0, 59.2, false)
+    TDS:Upgrade(12, 27, 1, 0.2, false)
+    TDS:Upgrade(12, 27, 0, 3.2, true)
+    TDS:Upgrade(11, 28, 0, 59.3, false)
+    TDS:Skip(28, 0, 39.4, false)
+    TDS:Upgrade(7, 29, 1, 0.4, false)
+    TDS:Upgrade(13, 29, 0, 3.1, true)
+    TDS:Place('Accelerator', -14.819047927856445, 1.000005841255188, -12.059322357177734, 30, 1, 14.6, false, 0, 0, 0, false)
+    TDS:Upgrade(14, 30, 1, 10.1, false)
+    TDS:Upgrade(14, 30, 1, 7.1, false)
+    TDS:Upgrade(14, 30, 1, 4.6, false)
+    TDS:Upgrade(14, 30, 0, 52.0, false)
+    TDS:Skip(30, 0, 49.1, false)
+    TDS:Upgrade(14, 32, 1, 6.4, false)
+    TDS:Upgrade(11, 33, 1, 6.5, false)
+    TDS:Place('Accelerator', -11.913751602172852, 1.000005841255188, -12.859567642211914, 33, 0, 46.2, false, 0, 0, 0, false)
+    TDS:Upgrade(15, 33, 0, 5.5, true)
+    TDS:Upgrade(15, 33, 0, 2.1, true)
+    TDS:Upgrade(15, 34, 1, 20.5, false)
+    TDS:Upgrade(15, 34, 1, 13.5, false)
+    TDS:Skip(34, 0, 51.0, false)
+    TDS:Upgrade(15, 35, 1, 18.3, false)
+    TDS:Place('Accelerator', -14.184867858886719, 1.000005841255188, -15.144702911376953, 35, 0, 56.0, false, 0, 0, 0, false)
+    TDS:Upgrade(16, 35, 0, 2.1, true)
+    TDS:Upgrade(16, 36, 1, 20.6, false)
+    TDS:Upgrade(16, 36, 1, 17.6, false)
+    TDS:Upgrade(16, 36, 1, 13.5, false)
+    TDS:Skip(36, 0, 52.1, false)
+    TDS:Upgrade(16, 37, 0, 53.1, false)
+    TDS:Place('Accelerator', -17.15616226196289, 1.000005841255188, -14.227910995483398, 37, 0, 40.2, false, 0, 0, 0, false)
+    TDS:Upgrade(17, 37, 0, 36.2, false)
+    TDS:Upgrade(17, 37, 0, 32.2, false)
+    TDS:Upgrade(17, 37, 0, 27.5, false)
+    TDS:Upgrade(17, 38, 1, 19.2, false)
+    TDS:Skip(38, 0, 46.0, false)
+    TDS:Upgrade(17, 39, 1, 18.4, false)
+    TDS:Place('Accelerator', -11.129981994628906, 1.000005841255188, -15.923530578613281, 39, 1, 4.4, false, 0, 0, 0, false)
+    TDS:Upgrade(18, 39, 1, 0.6, false)
+    TDS:Upgrade(18, 39, 0, 57.2, false)
+    TDS:Upgrade(18, 39, 0, 49.5, false)
+    TDS:Skip(39, 0, 47.1, false)
+    TDS:Upgrade(18, 39, 0, 3.2, true)
+    TDS:Upgrade(18, 40, 99, 26.1, false)
+    TDS:Place('Accelerator', -16.64278793334961, 1.000005841255188, -17.33211898803711, 40, 99, 11.5, false, 0, 0, 0, false)
+    TDS:Upgrade(19, 40, 99, 6.1, false)
+    TDS:Upgrade(19, 40, 99, 3.2, false)
+    TDS:Upgrade(19, 40, 98, 59.5, false)
+    TDS:Upgrade(19, 40, 98, 53.2, false)
+    end
+     if map == maplist[4] then
+  print([[
+
+  --> 1. Tested with Synapse and didn't get any bugs. If you find any let me know on discord.
+  --> 2. Make sure to give this strat a thumbs up if you enjoy it!
+  Strat by:  		DZ_DasherKTB
+  MultiStrat by:  		DZ_DasherKTB
+  ]])
+  local TDS = loadstring(game:HttpGet("https://raw.githubusercontent.com/wxzex/mmsautostratcontinuation/main/autostratscode.txt", true))() 
+  TDS:Loadout("Commander", "Ranger", "Accelerator", "Electroshocker", "Farm") 
+  TDS:Map("Grass Isle", true, "Survival")
+  TDS:Mode('Normal')
+  task.spawn(function()
+       wait(1)
+      for i,v in pairs(game.CoreGui:GetDescendants()) do
+          if v:IsA("TextLabel") and v.Name == "section_lbl" and v.Text == "" then
+              v.Text = "Strat By: DZ_DasherKTB"
+          end
+      end
+  end)
+    TDS:Skip(1, 0, 39.0, false)
+    TDS:Place('Electroshocker', 10.870809555053711, 1.0000038146972656, -23.177593231201172, 1, 0, 3.2, false, 0, 0, 0, true)
+    TDS:Place('Farm', 23.310503005981445, 0.9999866485595703, -30.569332122802734, 2, 0, 2.6, false, 0, 0, 0, true)
+    TDS:Upgrade(2, 3, 0, 59.8, false)
+    TDS:Place('Farm', 28.301836013793945, 0.9999876022338867, -28.863941192626953, 3, 0, 2.3, false, 0, 0, 0, true)
+    TDS:Upgrade(3, 4, 0, 59.3, false)
+    TDS:Place('Farm', 28.531892776489258, 0.9999909400939941, -24.114015579223633, 4, 0, 4.7, false, 0, 0, 0, true)
+    TDS:Upgrade(4, 4, 0, 2.2, true)
+    TDS:Upgrade(1, 5, 0, 58.0, false)
+    TDS:Place('Farm', 25.875812530517578, 1.0000033378601074, -19.73244285583496, 5, 0, 3.6, false, 0, 0, 0, true)
+    TDS:Upgrade(5, 5, 0, 1.0, true)
+    TDS:Upgrade(2, 6, 0, 58.4, false)
+    TDS:Upgrade(3, 6, 0, 1.0, true)
+    TDS:Place('Farm', 26.424306869506836, 1.0000019073486328, -13.780013084411621, 7, 0, 59.5, false, 0, 0, 0, false)
+    TDS:Upgrade(6, 7, 0, 58.5, false)
+    TDS:Place('Farm', 25.09412956237793, 1.0000014305114746, -8.66948413848877, 7, 0, 52.5, false, 0, 0, 0, false)
+    TDS:Upgrade(7, 7, 0, 50.2, false)
+    TDS:Place('Farm', 21.24473762512207, 0.9999899864196777, -4.715274810791016, 7, 0, 2.4, false, 0, 0, 0, true)
+    TDS:Upgrade(8, 7, 0, 1.5, true)
+    TDS:Upgrade(8, 8, 1, 0.7, false)
+    TDS:Upgrade(7, 8, 0, 58.6, false)
+    TDS:Upgrade(1, 8, 0, 2.4, true)
+    TDS:Upgrade(4, 9, 0, 53.1, false)
+    TDS:Upgrade(5, 9, 0, 51.0, false)
+    TDS:Place('Electroshocker', 16.216001510620117, 0.9999856948852539, -21.595531463623047, 10, 0, 49.3, false, 0, 0, 0, false)
+    TDS:Upgrade(9, 10, 0, 43.2, false)
+    TDS:Upgrade(6, 10, 0, 36.4, false)
+    TDS:Upgrade(6, 10, 0, 35.0, false)
+    TDS:Skip(10, 0, 34.2, false)
+    TDS:Place('Accelerator', 8.382030487060547, 1.0000028610229492, -16.53567886352539, 11, 0, 3.5, false, 0, 0, 0, true)
+    TDS:Upgrade(10, 12, 0, 59.5, false)
+    TDS:Upgrade(7, 12, 0, 52.8, false)
+    TDS:Upgrade(8, 12, 0, 5.8, true)
+    TDS:Upgrade(5, 13, 1, 0.8, false)
+    TDS:Upgrade(4, 13, 0, 58.9, false)
+    TDS:Upgrade(2, 13, 0, 55.2, false)
+    TDS:Upgrade(3, 13, 0, 4.4, true)
+    TDS:Upgrade(9, 14, 0, 55.2, false)
+    TDS:Upgrade(10, 14, 0, 51.5, false)
+    TDS:Place('Commander', 5.862363815307617, 1.0000028610229492, -18.818702697753906, 14, 0, 3.2, false, 0, 0, 0, true)
+    TDS:Upgrade(11, 15, 1, 0.8, false)
+    TDS:Upgrade(11, 15, 0, 59.7, false)
+    TDS:Ability(11, "Call Of Arms", 15, 0, 57.4, false)
+    TDS:Upgrade(9, 15, 0, 52.6, false)
+    TDS:Upgrade(8, 16, 1, 0.4, false)
+    TDS:Upgrade(10, 16, 0, 4.6, true)
+    TDS:Upgrade(1, 17, 0, 57.1, false)
+    TDS:Ability(11, "Call Of Arms", 17, 0, 54.0, false)
+    TDS:Upgrade(7, 18, 0, 58.7, false)
+    TDS:Upgrade(6, 18, 0, 56.2, false)
+    TDS:Upgrade(5, 19, 0, 56.2, false)
+    TDS:Ability(11, "Call Of Arms", 19, 0, 55.3, false)
+    TDS:Place('Accelerator', 11.13650131225586, 1.0000028610229492, -14.99005126953125, 19, 0, 51.5, false, 0, 0, 0, false)
+    TDS:Upgrade(12, 19, 0, 49.5, false)
+    TDS:Place('Commander', 3.7462308406829834, 1.0000028610229492, -16.4641170501709, 19, 0, 2.0, false, 0, 0, 0, true)
+    TDS:Upgrade(13, 20, 1, 0.4, false)
+    TDS:Upgrade(13, 20, 0, 58.2, false)
+    TDS:Ability(13, "Call Of Arms", 20, 0, 57.8, false)
+    TDS:Upgrade(12, 20, 0, 54.7, false)
+    TDS:Upgrade(12, 20, 0, 5.4, false)
+    TDS:Upgrade(4, 21, 1, 0.6, false)
+    TDS:Upgrade(3, 21, 0, 58.3, false)
+    TDS:Upgrade(2, 21, 0, 4.6, true)
+    TDS:Upgrade(9, 22, 1, 0.7, false)
+    TDS:Ability(11, "Call Of Arms", 22, 0, 56.7, false)
+    TDS:Skip(22, 0, 37.4, false)
+    TDS:Place('Ranger', 2.6989378929138184, 7.729729652404785, -20.230478286743164, 22, 0, 1.3, false, 0, 0, 0, true)
+    TDS:Upgrade(14, 23, 0, 57.0, false)
+    TDS:Upgrade(2, 23, 0, 52.0, false)
+    TDS:Ability(11, "Call Of Arms", 23, 0, 50.1, false)
+    TDS:Upgrade(14, 23, 0, 46.2, false)
+    TDS:Upgrade(10, 24, 0, 57.2, false)
+    TDS:Upgrade(3, 25, 1, 0.8, false)
+    TDS:Ability(13, "Call Of Arms", 25, 0, 56.2, false)
+    TDS:Place('Accelerator', 8.31082534790039, 1.0000019073486328, -13.00182056427002, 25, 0, 50.3, false, 0, 0, 0, false)
+    TDS:Upgrade(15, 25, 0, 48.3, false)
+    TDS:Ability(11, "Call Of Arms", 25, 0, 47.8, false)
+    TDS:Upgrade(8, 26, 1, 0.4, false)
+    TDS:Upgrade(7, 26, 0, 59.5, false)
+    TDS:Upgrade(1, 27, 1, 0.5, false)
+    TDS:Upgrade(14, 27, 0, 55.0, false)
+    TDS:Ability(13, "Call Of Arms", 27, 0, 54.3, false)
+    TDS:Upgrade(6, 27, 0, 4.7, true)
+    TDS:Upgrade(12, 28, 1, 0.6, false)
+    TDS:Ability(11, "Call Of Arms", 28, 0, 55.0, false)
+    TDS:Ability(13, "Call Of Arms", 28, 0, 45.6, false)
+    TDS:Place('Ranger', -0.3611184358596802, 7.729748249053955, -21.541160583496094, 29, 1, 0.2, false, 0, 0, 0, false)
+    TDS:Upgrade(16, 29, 0, 58.2, false)
+    TDS:Upgrade(16, 29, 0, 55.0, false)
+    TDS:Ability(11, "Call Of Arms", 29, 0, 49.7, false)
+    TDS:Upgrade(16, 29, 0, 46.3, false)
+    TDS:Upgrade(15, 29, 0, 42.7, false)
+    TDS:Upgrade(15, 29, 0, 40.1, false)
+    TDS:Upgrade(15, 29, 0, 4.7, true)
+    TDS:Upgrade(5, 30, 1, 20.7, false)
+    TDS:Upgrade(4, 30, 1, 18.8, false)
+    TDS:Place('Electroshocker', 6.0662360191345215, 1.0000038146972656, -27.46636962890625, 30, 1, 9.4, false, 0, 0, 0, false)
+    TDS:Upgrade(17, 30, 1, 6.0, false)
+    TDS:Upgrade(17, 30, 1, 4.1, false)
+    TDS:Ability(11, "Call Of Arms", 30, 1, 1.4, false)
+    TDS:Upgrade(17, 30, 0, 5.1, false)
+    TDS:Ability(13, "Call Of Arms", 31, 1, 9.2, false)
+    TDS:Ability(11, "Call Of Arms", 32, 1, 15.2, false)
+    TDS:Upgrade(12, 32, 1, 12.3, false)
+    TDS:Ability(13, "Call Of Arms", 32, 1, 4.6, false)
+    TDS:Upgrade(14, 33, 1, 14.0, false)
+    TDS:Ability(11, "Call Of Arms", 33, 1, 7.5, false)
+    TDS:Skip(33, 0, 53.4, false)
+    TDS:Ability(13, "Call Of Arms", 33, 0, 3.4, true)
+    TDS:Upgrade(10, 34, 1, 20.5, false)
+    TDS:Ability(11, "Call Of Arms", 34, 1, 9.5, false)
+    TDS:Upgrade(1, 34, 1, 7.4, false)
+    TDS:Upgrade(17, 34, 1, 2.7, false)
+    TDS:Place('Accelerator', 11.189769744873047, 1.0000028610229492, -18.28054428100586, 34, 0, 3.4, false, 0, 0, 0, true)
+    TDS:Ability(13, "Call Of Arms", 35, 1, 20.0, true)
+    TDS:Upgrade(18, 35, 1, 18.3, false)
+    TDS:Upgrade(18, 35, 1, 17, false)
+    TDS:Upgrade(18, 35, 1, 15, false)
+    TDS:Upgrade(18, 35, 1, 3.0, false)
+    TDS:Ability(11, "Call Of Arms", 36, 1, 10.7, false)
+    TDS:Upgrade(18, 37, 1, 19.6, false)
+    TDS:Ability(13, "Call Of Arms", 37, 1, 17.3, false)
+    TDS:Place('Accelerator', 14.051704406738281, 1.000002384185791, -16.198562622070312, 37, 1, 6.4, false, 0, 0, 0, false)
+    TDS:Upgrade(19, 37, 1, 5, false)
+    TDS:Upgrade(19, 37, 1, 3, false)
+    TDS:Upgrade(19, 37, 1, 1, false)
+    TDS:Ability(11, "Call Of Arms", 37, 1, 0.1, false)
+    TDS:Upgrade(16, 37, 0, 50.2, false)
+    TDS:Skip(37, 0, 49.5, false)
+    TDS:Upgrade(19, 38, 1, 19.5, false)
+    TDS:Place('Ranger', 2.7995033264160156, 5.657247543334961, -24.040555953979492, 38, 1, 16.6, false, 0, 0, 0, false)
+    TDS:Upgrade(20, 38, 1, 14.4, false)
+    TDS:Upgrade(20, 38, 1, 11.2, false)
+    TDS:Upgrade(20, 38, 1, 10.5, false)
+    TDS:Ability(11, "Call Of Arms", 38, 1, 8.6, false)
+    TDS:Ability(11, "Call Of Arms", 38, 1, 5.1, false)
+    TDS:Upgrade(20, 38, 0, 59.3, false)
+    TDS:Skip(38, 0, 53.7, false)
+    TDS:Ability(13, "Call Of Arms", 39, 1, 16.8, false)
+    TDS:Ability(11, "Call Of Arms", 39, 0, 57.5, false)
+    TDS:Skip(39, 0, 53.1, false)
+    TDS:SellAllFarms( 40, 99, 58.3)
+    TDS:Upgrade(15, 40, 99, 57.7, false)
+    TDS:Upgrade(19, 40, 99, 55.5, false)
+    TDS:Ability(13, "Call Of Arms", 40, 99, 47.5, false)
+    TDS:Place('Accelerator', 14.325054168701172, 1.0000019073486328, -12.233137130737305, 40, 99, 45.6, false, 0, 0, 0, false)
+    TDS:Upgrade(21, 40, 99, 43.2, false)
+    TDS:Upgrade(21, 40, 99, 40.0, false)
+    TDS:Upgrade(21, 40, 99, 38.6, false)
+    TDS:Upgrade(21, 40, 99, 37.0, false)
+    TDS:Ability(11, "Call Of Arms", 40, 99, 35.0, false)
+    TDS:Ability(11, "Call Of Arms", 40, 99, 33.0, false)
+    TDS:Place('Accelerator', 18.429704666137695, 1.0000028610229492, -16.458663940429688, 40, 99, 31.3, false, 0, 0, 0, false)
+    TDS:Upgrade(22, 40, 99, 32.0, false)
+    TDS:Upgrade(22, 40, 99, 30.0, false)
+    TDS:Upgrade(22, 40, 99, 29.0, false)
+    TDS:Upgrade(22, 40, 99, 27.0, false)
+  end
+      if map == maplist[5] then
+  print([[
+
+  --> 1. Tested with Synapse and didn't get any bugs. If you find any let me know on discord.
+  --> 2. Make sure to give this strat a thumbs up if you enjoy it!
+  Strat by:  		Gradymeister#3270
+  MultiStrat by:  		DZ_DasherKTB :>
+  ]])
+  local TDS = loadstring(game:HttpGet("https://raw.githubusercontent.com/banbuskox/dfhtyxvzexrxgfdzgzfdvfdz/main/ckmhjvskfkmsStratFun2", true))() 
+  TDS:Loadout("Farm", "Commander", "Soldier", "Shotgunner", "DJ Booth") 
+  TDS:Map("Night Station", true, "Survival")
+  TDS:Mode('Normal')
+  task.spawn(function()
+      wait(1)
+      for i,v in pairs(game.CoreGui:GetDescendants()) do
+          if v:IsA("TextLabel") and v.Name == "section_lbl" and v.Text == "" then
+              v.Text = "Strat By: Gradymeister + DZ_DasherKTB"
+          end
+      end
+  end)
+  TDS:Place('Soldier', 5.818484306335449, 0.07500037550926208, -24.423749923706055, 0, 0, 10)--1
+  TDS:Place('Farm', -13.148622512817383, 0.07500037550926208, -10.495176315307617, 0, 0, 9)--2 farm 1
+  TDS:Place('Soldier', 2.5739731788635254, 0.07500037550926208, -24.40503692626953, 2, 0, 59)--3
+  TDS:Upgrade(2, 2, 0, 4)--farm(1) U (1)Gradymeister#3270
+  TDS:Upgrade(2, 3, 0, 4)--farm(1) U (2)
+  TDS:Place('Soldier', 7.1119065284729, 0.07500037550926208, -27.43052864074707, 4, 0, 59)--4
+  TDS:Upgrade(2, 5, 0, 4)--farm(1) U (3)Gradymeister#3270
+  TDS:Place('Farm', -13.079410552978516, 0.07500037550926208, -14.148445129394531, 5, 0, 4)--5 farm 2
+  TDS:Place('Soldier', 7.220495700836182, 0.07500037550926208, -30.477672576904297, 6, 0, 59)--6
+  TDS:Upgrade(5, 6, 0, 4)--farm(2) U (1)Gradymeister#3270
+  TDS:Upgrade(5, 6, 0, 4)--farm(2) U (2)
+  TDS:Place('Shotgunner', 2.3719570636749268, 0.07500037550926208, -27.51962661743164, 7, 0, 59)--7
+  TDS:Upgrade(7, 7, 0, 59)--Shot(1) U (1)
+  TDS:Upgrade(5, 7, 0, 4)--farm(2) U (3)Gradymeister#3270
+  TDS:Upgrade(7, 8, 0, 4)--Shot(1) U (2)
+  TDS:Place('Farm', -13.28238296508789, 0.07500037550926208, -17.720285415649414,8, 0, 4)--8 farm 3
+  TDS:Upgrade(8, 8, 0, 3)--farm(3) U (1)Gradymeister#3270
+  TDS:Upgrade(8, 9, 0, 59)--farm(3) U (2)
+  TDS:Upgrade(8, 9, 0, 4)--farm(3) U (3)
+  TDS:Place('Farm', -13.300004959106445, 0.07500037550926208, -21.304119110107422, 9, 0, 4)--9 farm 4
+  TDS:Upgrade(9, 9, 0, 3)--farm(4) U (1)
+  TDS:Place('Shotgunner', -3.777078151702881, 0.07500037550926208, -27.538543701171875, 10, 0, 59)--10
+  TDS:Upgrade(10, 10, 0, 59)--Shot(2) U (1)
+  TDS:Upgrade(10, 10, 0, 59)--Shot(2) U (2)
+  TDS:Upgrade(9, 10, 0, 4)--farm(4) U (2)Gradymeister#3270
+  TDS:Place('Farm', -13.192811965942383, 0.07500037550926208, -24.892597198486328, 10, 0, 4)--11 farm 5
+  TDS:Upgrade(11, 10, 0, 3)--farm(5) U (1)
+  TDS:Upgrade(11, 11, 0, 59)--farm(5) U (2)
+  TDS:Upgrade(9, 11, 0, 59)--farm(4) U (3)Gradymeister#3270
+  TDS:Upgrade(11, 11, 0, 4)--farm(5) U (3)
+  TDS:Place('Shotgunner', -3.7351245880126953, 0.07500037550926208, -30.565757751464844, 12, 0, 59)--12
+  TDS:Upgrade(12, 12, 0, 59)--Shot(3) U (1)
+  TDS:Upgrade(12, 12, 0, 59)--Shot(3) U (2)Gradymeister#3270
+  TDS:Place('Shotgunner', 2.373692512512207, 0.07500037550926208, -30.620128631591797, 12, 0, 58)--13
+  TDS:Upgrade(13, 12, 0, 57)--Shot(4) U (1)
+  TDS:Place('Farm', -9.529922485351562, 0.07500037550926208, -10.670917510986328, 12, 0, 4)--14 farm 6
+  TDS:Upgrade(14, 12, 0, 4)--farm(6) U (1)
+  TDS:Upgrade(14, 12, 0, 3)--farm(6) U (2)
+  TDS:Upgrade(14, 12, 0, 2)--farm(6) U (3)Gradymeister#3270
+  TDS:Upgrade(13, 13, 0, 59)--Shot(4) U (2)
+  TDS:Place('Farm', -13.12321662902832, 0.07500037550926208, -28.556499481201172, 13, 0, 59)--15 farm 7
+  TDS:Upgrade(15, 13, 0, 58)--farm(7) U (1)
+  TDS:Upgrade(15, 13, 0, 57)--farm(7) U (2)
+  TDS:Place('Farm', -9.52827262878418, 0.07500037550926208, -14.242362022399902, 13, 0, 4)--16 farm 8
+  TDS:Upgrade(15, 13, 0, 4)--farm(7) U (3)Gradymeister#3270
+  TDS:Upgrade(16, 13, 0, 4)--farm(8) U (1)
+  TDS:Upgrade(16, 13, 0, 3)--farm(8) U (2)
+  TDS:Upgrade(16, 14, 0, 2)--farm(8) U (3)
+  TDS:Place('Commander', -6.065537452697754, 0.07500037550926208, -18.045223236083984, 14, 0, 59)--17
+  TDS:Place('Commander', -3.033308982849121, 0.07500037550926208, -18.195213317871094, 15, 0, 59)--18
+  TDS:Place('DJ Booth', 0.027112245559692383, 0.07500037550926208, -18.191722869873047, 15, 0, 57)--19
+  TDS:Upgrade(19, 15, 0, 56)--DJ(1) U (1)
+  TDS:Upgrade(19, 15, 0, 56)--DJ(1) U (2)Gradymeister#3270
+  TDS:Upgrade(19, 15, 0, 55)--DJ(1) U (3)
+  TDS:Upgrade(2, 15, 0, 4)--farm(1) U (4)
+  TDS:Upgrade(17, 16, 0, 59)--Commander(1) U (1)
+  TDS:Upgrade(17, 16, 0, 59)--Commander(1) U (2)Gradymeister#3270
+  TDS:Ability(17, "Call Of Arms", 16, 0, 58)
+  TDS:Upgrade(2, 16, 0, 4)--farm(1) U (5)
+  TDS:Upgrade(7, 17, 0, 59)--Shot(1) U (3)
+  TDS:Upgrade(18, 17, 0, 59)--Commander(2) U (1)Gradymeister#3270
+  TDS:Upgrade(18, 17, 0, 58)--Commander(2) U (2)
+  TDS:Ability(18, "Call Of Arms", 18, 0, 57)
+  TDS:Upgrade(5, 18, 0, 4)--farm(2) U (4)
+  TDS:Upgrade(5, 18, 0, 4)--farm(2) U (5)Gradymeister#3270
+  TDS:Upgrade(10, 19, 0, 59)--Shot(2) U (3)
+  TDS:Place('Commander', -3.7212705612182617, 0.07500037550926208, -21.27091407775879, 19, 0, 59)--20
+  TDS:Upgrade(20, 19, 0, 58)--Commander(3) U (1)
+  TDS:Upgrade(20, 19, 0, 57)--Commander(3) U (2)
+  TDS:AutoChain(20, 17, 18, 19, 0, 56)--AUTO CTA
+  TDS:Upgrade(8, 19, 0, 4)--farm(3) U (4)
+  TDS:Upgrade(8, 20, 0, 59)--farm(3) U (5)
+  TDS:Upgrade(7, 21, 0, 59)--Shot(1) U (4)Gradymeister#3270
+  TDS:Upgrade(10, 22, 0, 59)--Shot(2) U (4)
+  TDS:Upgrade(12, 22, 0, 59)--Shot(3) U (3)
+  TDS:Upgrade(9, 22, 0, 4)--farm(4) U (4)
+  TDS:Upgrade(12, 23, 0, 59)--Shot(3) U (4)
+  TDS:Upgrade(9, 23, 0, 4)--farm(4) U (5)
+  TDS:Upgrade(11, 24, 0, 59)--farm(5) U (4)Gradymeister#3270
+  TDS:Upgrade(11, 24, 0, 59)--farm(5) U (5)
+  TDS:Upgrade(14, 24, 0, 4)--farm(6) U (4)
+  TDS:Upgrade(13, 25, 0, 59)--Shot(4) U (3)
+  TDS:Upgrade(14, 25, 0, 59)--farm(6) U (5)
+  TDS:Upgrade(15, 25, 0, 57)--farm(7) U (4)
+  TDS:Upgrade(15, 25, 0, 4)--farm(7) U (5)
+  TDS:Upgrade(13, 26, 0, 59)--Shot(4) U (4)Gradymeister#3270
+  TDS:Upgrade(16, 26, 0, 4)--farm(8) U (4)
+  TDS:Upgrade(16, 26, 0, 4)--farm(8) U (5)
+  TDS:Sell(1, 26, 0, 3)--soldier 1
+  TDS:Sell(3, 26, 0, 3)--soldier 2Gradymeister#3270
+  TDS:Sell(4, 26, 0, 2)--soldier 3
+  TDS:Sell(6, 26, 0, 2)--soldier 4
+  TDS:Upgrade(19, 27, 0, 59)--DJ(1) U (4)
+  TDS:Upgrade(19, 27, 0, 59)--DJ(1) U (5)Gradymeister#3270
+  TDS:Place('Shotgunner', 2.391231060028076, 0.07500037550926208, -24.445388793945312, 27, 0, 4)--21
+  TDS:Upgrade(21, 27, 0, 4)--Shot(5) U (1)
+  TDS:Upgrade(21, 27, 0, 3)--Shot(5) U (2)Gradymeister#3270
+  TDS:Upgrade(21, 28, 0, 59)--Shot(5) U (3)
+  TDS:Upgrade(21, 28, 0, 59)--Shot(5) U (4)
+  TDS:Place('Shotgunner', -3.7705416679382324, 0.07500037550926208, -24.3975830078125, 28, 0, 58)--22
+  TDS:Upgrade(22, 28, 0, 57)--Shot(6) U (1)
+  TDS:Upgrade(22, 28, 0, 57)--Shot(6) U (2)Gradymeister#3270
+  TDS:Upgrade(22, 28, 0, 56)--Shot(6) U (3)
+  TDS:Upgrade(22, 29, 0, 59)--Shot(6) U (4)
+  TDS:Place('Shotgunner', 5.406899929046631, 0.07500037550926208, -24.468952178955078, 29, 0, 59)--23
+  TDS:Upgrade(23, 29, 0, 58)--Shot(7) U (1)
+  TDS:Upgrade(23, 29, 0, 58)--Shot(7) U (2)
+  TDS:Upgrade(23, 29, 0, 57)--Shot(7) U (3)
+  TDS:Upgrade(23, 29, 0, 54)--Shot(7) U (4)Gradymeister#3270
+  TDS:Place('Shotgunner', 5.433204174041748, 0.07500037550926208, -27.565195083618164, 29, 0, 4)--24
+  TDS:Upgrade(24, 29, 0, 4)--Shot(9) U (1)
+  TDS:Upgrade(24, 29, 0, 3)--Shot(9) U (2)Gradymeister#3270
+  TDS:Upgrade(24, 29, 0, 2)--Shot(9) U (3)
+  TDS:Upgrade(24, 30, 1, 10)--Shot(9) U (4)
+  TDS:Place('Shotgunner', 5.411324501037598, 0.07500037550926208, -30.677278518676758, 30, 0, 4)--25
+  TDS:Upgrade(25, 30, 0, 4)--Shot(10) U (1)
+  TDS:Upgrade(25, 30, 0, 4)--Shot(10) U (2)Gradymeister#3270
+  TDS:Upgrade(25, 30, 0, 3)--Shot(10) U (3)
+  TDS:Upgrade(25, 30, 0, 3)--Shot(10) U (4)
+  TDS:Place('Shotgunner', 2.3903141021728516, 0.07500037550926208, -33.64951705932617, 31, 1, 20)--26
+  TDS:Upgrade(26, 31, 1, 19)--Shot(11) U (1)
+  TDS:Upgrade(26, 31, 1, 19)--Shot(11) U (2)
+  TDS:Upgrade(26, 31, 1, 18)--Shot(11) U (3)Gradymeister#3270
+  TDS:Upgrade(26, 31, 1, 18)--Shot(11) U (4)
+  TDS:Place('Shotgunner', 6.419554233551025, 0.07500037550926208, -33.73911666870117, 31, 1, 17)--27
+  TDS:Upgrade(27, 31, 1, 16)--Shot(12) U (1)
+  TDS:Upgrade(27, 31, 1, 15)--Shot(12) U (2)
+  TDS:Upgrade(27, 31, 1, 14)--Shot(12) U (3)
+  TDS:Upgrade(17, 31, 0, 4)--Commander(1) U (3)Gradymeister#3270
+  TDS:Upgrade(17, 32, 1, 20)--Commander(1) U (4)
+  TDS:Upgrade(18, 32, 1, 19)--Commander(2) U (3)
+  TDS:Upgrade(27, 32, 1, 15)--Shot(12) U (4)
+  TDS:Place('Shotgunner', 8.487069129943848, 0.07500037550926208, -24.395126342773438, 32, 1, 8)--28
+  TDS:Upgrade(28, 32, 1, 8)--Shot(13) U (1)
+  TDS:Upgrade(28, 32, 1, 7)--Shot(13) U (2)
+  TDS:Upgrade(28, 32, 1, 7)--Shot(13) U (3)Gradymeister#3270
+  TDS:Place('Shotgunner', 8.538529396057129, 0.07500037550926208, -27.451522827148438, 33, 1, 17)--29
+  TDS:Upgrade(29, 33, 1, 16)--Shot(14) U (1)
+  TDS:Upgrade(29, 33, 1, 16)--Shot(14) U (2)
+  TDS:Upgrade(29, 33, 1, 15)--Shot(14) U (3)Gradymeister#3270
+  TDS:Upgrade(29, 33, 1, 15)--Shot(14) U (4)
+  TDS:Place('Shotgunner', 8.57435417175293, 0.07500037550926208, -30.595849990844727, 33, 1, 8)--30
+  TDS:Upgrade(30, 33, 1, 8)--Shot(15) U (1)
+  TDS:Upgrade(30, 33, 1, 7)--Shot(15) U (2)Gradymeister#3270
+  TDS:Upgrade(30, 33, 1, 7)--Shot(15) U (3)
+  TDS:Place('Shotgunner', 3.047210216522217, 0.07500037550926208, -18.27920913696289, 33, 1, 5)--31
+  TDS:Place('Shotgunner', 6.191225528717041, 0.07500037550926208, -18.290611267089844, 33, 1, 4)--32
+  TDS:Place('Shotgunner', 6.269420623779297, 0.07500037550926208, -15.240524291992188, 33, 1, 3)--33
+  TDS:Upgrade(28, 34, 1, 20)--Shot(13) U (4)
+  TDS:Upgrade(30, 34, 1, 20)--Shot(15) U (4)
+  TDS:Upgrade(31, 34, 1, 19)--Shot(16) U (1)
+  TDS:Upgrade(31, 34, 1, 19)--Shot(16) U (2)
+  TDS:Upgrade(31, 34, 1, 18)--Shot(16) U (3)Gradymeister#3270
+  TDS:Upgrade(31, 34, 1, 18)--Shot(16) U (4)
+  TDS:Upgrade(32, 34, 1, 17)--Shot(17) U (1)
+  TDS:Upgrade(32, 34, 1, 17)--Shot(17) U (2)
+  TDS:Upgrade(32, 34, 1, 16)--Shot(17) U (3)
+  TDS:Upgrade(32, 34, 1, 10)--Shot(17) U (4)Gradymeister#3270
+  TDS:Upgrade(33, 34, 0, 4)--Shot(18) U (1)
+  TDS:Upgrade(33, 34, 0, 4)--Shot(18) U (2)
+  TDS:Upgrade(33, 34, 0, 3)--Shot(18) U (3)
+  TDS:Upgrade(33, 35, 1, 20)--Shot(18) U (4)
+  TDS:Place('Shotgunner', 3.210728645324707, 0.07500037550926208, -15.23838996887207, 35, 1, 19)--34
+  TDS:Upgrade(34, 35, 1, 11)--Shot(19) U (1)
+  TDS:Upgrade(34, 35, 1, 11)--Shot(19) U (2)
+  TDS:Upgrade(34, 35, 1, 10)--Shot(19) U (3)Gradymeister#3270
+  TDS:Upgrade(34, 36, 1, 20)--Shot(19) U (4)
+  TDS:Place('Shotgunner', 0.16923213005065918, 0.07500037550926208, -15.149426460266113, 36, 1, 18)--35
+  TDS:Upgrade(35, 36, 1, 18)--Shot(20) U (1)
+  TDS:Upgrade(35, 36, 1, 18)--Shot(20) U (2)Gradymeister#3270
+  TDS:Upgrade(35, 36, 1, 17)--Shot(20) U (3)
+  TDS:Upgrade(35, 36, 1, 17)--Shot(20) U (4)
+  TDS:Place('Shotgunner', -2.8847713470458984, 0.07500037550926208, -15.136845588684082, 36, 0, 4)--36
+  TDS:Upgrade(36, 36, 0, 4)--Shot(21) U (1)
+  TDS:Upgrade(36, 36, 0, 4)--Shot(21) U (2)
+  TDS:Upgrade(36, 36, 0, 3)--Shot(21) U (3)Gradymeister#3270
+  TDS:Upgrade(36, 36, 0, 2)--Shot(21) U (4)
+  TDS:Place('Shotgunner', -6.886444091796875, 0.07500037550926208, -22.76839256286621, 37, 1, 20)--37
+  TDS:Upgrade(37, 37, 1, 19)--Shot(22) U (1)
+  TDS:Upgrade(37, 37, 1, 19)--Shot(22) U (2)
+  TDS:Upgrade(37, 37, 1, 18)--Shot(22) U (3)Gradymeister#3270
+  TDS:Upgrade(37, 37, 1, 18)--Shot(22) U (4)
+  TDS:Place('Shotgunner', -6.835777282714844, 0.07500037550926208, -25.845914840698242, 37, 1, 17)--38
+  TDS:Upgrade(38, 37, 1, 16)--Shot(23) U (1)
+  TDS:Upgrade(38, 37, 1, 15)--Shot(23) U (2)Gradymeister#3270
+  TDS:Upgrade(38, 37, 1, 13)--Shot(23) U (3)
+  TDS:Upgrade(38, 37, 1, 4)--Shot(23) U (4)
+  TDS:Skip(37, 0, 54)
+  TDS:Skip(37, 0, 53)
+  TDS:Place('Shotgunner', -5.949267387390137, 0.07500037550926208, -15.038374900817871, 37, 0, 4)--39
+  TDS:Place('Shotgunner', 6.2581892013549805, 0.07500037550926208, -12.140957832336426, 37, 0, 4)--40
+  TDS:Place('Shotgunner', 3.2441139221191406, 0.07500037550926208, -12.148711204528809, 37, 0, 4)--41
+  TDS:Place('Shotgunner', 0.1785564422607422, 0.07500037550926208, -12.043123245239258, 37, 0, 3)--42
+  TDS:Place('Shotgunner', -2.9072136878967285, 0.07500037550926208, -12.111763000488281, 37, 0, 3)--43
+  TDS:Upgrade(39, 38, 1, 19)--Shot(24) U (1)
+  TDS:Upgrade(39, 38, 1, 19)--Shot(24) U (2)Gradymeister#3270
+  TDS:Upgrade(39, 38, 1, 18)--Shot(24) U (3)
+  TDS:Upgrade(39, 38, 1, 18)--Shot(24) U (4)
+  TDS:Upgrade(40, 38, 1, 17)--Shot(25) U (1)
+  TDS:Upgrade(40, 38, 1, 17)--Shot(25) U (2)Gradymeister#3270
+  TDS:Upgrade(40, 38, 1, 16)--Shot(25) U (3)
+  TDS:Upgrade(40, 38, 1, 16)--Shot(25) U (4)
+  TDS:Upgrade(41, 38, 1, 15)--Shot(26) U (1)
+  TDS:Upgrade(41, 38, 1, 15)--Shot(26) U (2)Gradymeister#3270
+  TDS:Upgrade(41, 38, 1, 14)--Shot(26) U (3)
+  TDS:Skip(38, 0, 54)
+  TDS:Skip(38, 0, 53)
+  TDS:Upgrade(41, 38, 0, 4)--Shot(26) U (4)
+  TDS:Upgrade(42, 38, 0, 4)--Shot(27) U (1)
+  TDS:Upgrade(42, 38, 0, 3)--Shot(27) U (2)Gradymeister#3270
+  TDS:Upgrade(42, 38, 0, 2)--Shot(27) U (3)
+  TDS:Upgrade(42, 39, 1, 20)--Shot(27) U (4)
+  TDS:Upgrade(43, 39, 1, 19)--Shot(28) U (1)
+  TDS:Upgrade(43, 39, 1, 19)--Shot(28) U (2)Gradymeister#3270
+  TDS:Upgrade(43, 39, 1, 18)--Shot(28) U (3)
+  TDS:Upgrade(43, 39, 1, 15)--Shot(28) U (4)
+  TDS:Skip(39, 0, 54)
+  TDS:Skip(39, 0, 53)
+  TDS:Place('Shotgunner', -5.930129051208496, 0.07500037550926208, -11.952861785888672, 39, 0, 4)--44
+  TDS:Upgrade(44, 39, 0, 4)--Shot(29) U (1)
+  TDS:Upgrade(44, 39, 0, 4)--Shot(29) U (2)
+  TDS:Upgrade(44, 39, 0, 3)--Shot(29) U (3)Gradymeister#3270
+  TDS:Upgrade(44, 39, 0, 2)--Shot(29) U (4)
+  TDS:Sell(2, 40, 99, 59)--farm 1 sell
+  TDS:Sell(5, 40, 99, 59)--farm 2 sellGradymeister#3270
+  TDS:Sell(8, 40, 99, 59)--farm 3 sell
+  TDS:Sell(9, 40, 99, 58)--farm 4 sell
+  TDS:Sell(11, 40, 99, 58)--farm 5 sellGradymeister#3270
+  TDS:Sell(14, 40, 99, 58)--farm 6 sell
+  TDS:Sell(15, 40, 99, 57)--farm 7 sell
+  TDS:Sell(16, 40, 99, 57)--farm 8 sell
+  TDS:Place('Shotgunner', 12.363351821899414, 0.07500037550926208, -19.17992401123047, 40, 99, 56)--45
+  TDS:Upgrade(45, 40, 99, 56)--Shot(30) U (1)
+  TDS:Upgrade(45, 40, 99, 56)--Shot(30) U (2)Gradymeister#3270
+  TDS:Upgrade(45, 40, 99, 55)--Shot(30) U (3)
+  TDS:Upgrade(45, 40, 99, 55)--Shot(30) U (4)
+  TDS:Place('Shotgunner', 12.349894523620605, 0.07500037550926208, -16.173583984375, 40, 99, 54)--46
+  TDS:Upgrade(46, 40, 99, 53)--Shot(31) U (1)
+  TDS:Upgrade(46, 40, 99, 53)--Shot(31) U (2)Gradymeister#3270
+  TDS:Upgrade(46, 40, 99, 52)--Shot(31) U (3)
+  TDS:Upgrade(46, 40, 99, 52)--Shot(31) U (4)
+  TDS:Place('Shotgunner', 12.405400276184082, 0.07500037550926208, -13.096586227416992, 40, 99, 51)--47
+  TDS:Upgrade(47, 40, 99, 50)--Shot(32) U (1)Gradymeister#3270
+  TDS:Upgrade(47, 40, 99, 50)--Shot(32) U (2)
+  TDS:Upgrade(47, 40, 99, 49)--Shot(32) U (3)
+  TDS:Upgrade(47, 40, 99, 49)--Shot(32) U (4)
+  TDS:Place('Shotgunner', 12.371295928955078, 0.07500037550926208, -9.958130836486816, 40, 99, 48)--48
+  TDS:Upgrade(48, 40, 99, 47)--Shot(33) U (1)
+  TDS:Upgrade(48, 40, 99, 47)--Shot(33) U (2)Gradymeister#3270
+  TDS:Upgrade(48, 40, 99, 46)--Shot(33) U (3)
+  TDS:Upgrade(48, 40, 99, 46)--Shot(33) U (4)
+  TDS:Place('Shotgunner', 12.426210403442383, 0.07500037550926208, -6.91192626953125, 40, 99, 40)--49
+  TDS:Upgrade(49, 40, 99, 39)--Shot(34) U (1)Gradymeister#3270
+  TDS:Upgrade(49, 40, 99, 39)--Shot(34) U (2)
+  TDS:Upgrade(49, 40, 99, 38)--Shot(34) U (3)
+  TDS:Upgrade(49, 40, 99, 38)--Shot(34) U (4)
+  TDS:Place('Shotgunner', 15.437088012695312, 0.07500037550926208, -19.01337432861328, 40, 99, 37)--50
+  TDS:Upgrade(50, 40, 99, 36)--Shot(35) U (1)
+  TDS:Upgrade(50, 40, 99, 36)--Shot(35) U (2)Gradymeister#3270
+  TDS:Upgrade(50, 40, 99, 35)--Shot(35) U (3)
+  TDS:Upgrade(50, 40, 99, 35)--Shot(35) U (4)
+  TDS:Place('Shotgunner', 15.494491577148438, 0.07500037550926208, -15.91351318359375, 40, 99, 31)--51
+  TDS:Upgrade(51, 40, 99, 30)--Shot(36) U (1)
+  TDS:Upgrade(51, 40, 99, 30)--Shot(36) U (2)Gradymeister#3270
+  TDS:Upgrade(51, 40, 99, 29)--Shot(36) U (3)
+  TDS:Upgrade(51, 40, 99, 29)--Shot(36) U (4)
+  TDS:Place('Shotgunner', 15.47461986541748, 0.07500037550926208, -12.75283432006836, 40, 99, 27)--52
+  TDS:Upgrade(52, 40, 99, 26)--Shot(37) U (1)
+  TDS:Upgrade(52, 40, 99, 26)--Shot(37) U (2)Gradymeister#3270
+  TDS:Upgrade(52, 40, 99, 26)--Shot(37) U (3)
+  TDS:Upgrade(52, 40, 99, 26)--Shot(37) U (4)
+  TDS:Place('Shotgunner', 9.411714553833008, 0.07500037550926208, -4.1717071533203125, 40, 99, 24)--53
+  TDS:Upgrade(53, 40, 99, 23)--Shot(38) U (1)Gradymeister#3270
+  TDS:Upgrade(53, 40, 99, 23)--Shot(38) U (2)
+  TDS:Upgrade(53, 40, 99, 22)--Shot(38) U (3)
+  TDS:Upgrade(53, 40, 99, 22)--Shot(38) U (4)
+  TDS:Sell(12, 40, 99, 21)--shotgunner
+  TDS:Sell(10, 40, 99, 21)--shotgunnerGradymeister#3270
+  TDS:Sell(38, 40, 99, 21)--shotgunner
+  TDS:Sell(37, 40, 99, 21)--shotgunner
+  TDS:Place('Shotgunner', 6.335257530212402, 0.07500037550926208, -4.2176713943481445, 40, 99, 20)--54
+  TDS:Upgrade(54, 40, 99, 19)--Shot(39) U (1)
+  TDS:Upgrade(54, 40, 99, 19)--Shot(39) U (2)
+  TDS:Upgrade(54, 40, 99, 18)--Shot(39) U (3)Gradymeister#3270
+  TDS:Upgrade(54, 40, 99, 18)--Shot(39) U (4)
+  TDS:Sell(26, 40, 99, 17)--shotgunner
+  TDS:Sell(13, 40, 99, 17)--shotgunner
+  TDS:Sell(27, 40, 99, 17)--shotgunner 
+  TDS:Place('Shotgunner', 3.2913966178894043, 0.07500037550926208, -4.238041877746582, 40, 99, 16)--55
+  TDS:Upgrade(55, 40, 99, 15)--Shot(40) U (1)Gradymeister#3270
+  TDS:Upgrade(55, 40, 99, 15)--Shot(40) U (2)
+  TDS:Upgrade(55, 40, 99, 15)--Shot(40) U (3)Gradymeister#3270
+  TDS:Upgrade(55, 40, 99, 14)--Shot(40) U (4)
+  TDS:Place('Shotgunner', 0.2161417007446289, 0.07500037550926208, -4.262051582336426, 40, 99, 14)--56
+  TDS:Upgrade(56, 40, 99, 13)--Shot(41) U (1)
+  TDS:Upgrade(56, 40, 99, 13)--Shot(41) U (2)Gradymeister#3270
+  TDS:Upgrade(56, 40, 99, 12)--Shot(41) U (3)
+  TDS:Upgrade(56, 40, 99, 12)--Shot(41) U (4)
+  TDS:Place('Shotgunner', -2.868102550506592, 0.07500037550926208, -4.264366149902344, 40, 99, 12)--57
+  TDS:Upgrade(57, 40, 99, 11)--Shot(42) U (1)Gradymeister#3270
+  TDS:Upgrade(57, 40, 99, 11)--Shot(42) U (2)
+  TDS:Upgrade(57, 40, 99, 10)--Shot(42) U (3)
+  TDS:Upgrade(57, 40, 99, 10)--Shot(42) U (4)
+  TDS:Place('Shotgunner', -5.943308353424072, 0.07500037550926208, -4.260336875915527, 40, 99, 9)--58
+  TDS:Upgrade(58, 40, 99, 8)--Shot(42) U (1)Gradymeister#3270
+  TDS:Upgrade(58, 40, 99, 8)--Shot(42) U (2)Gradymeister#3270
+  TDS:Upgrade(58, 40, 99, 7)--Shot(42) U (3)Gradymeister#3270
+  TDS:Upgrade(58, 40, 99, 7)--Shot(42) U (4)Gradymeister#3270
+  TDS:Sell(25, 40, 98, 34)--shotgunner
+  TDS:Sell(24, 40, 98, 34)--shotgunner
+  TDS:Sell(28, 40, 98, 33)--shotgunner
+  TDS:Sell(29, 40, 98, 33)--shotgunner
+  TDS:Sell(22, 40, 98, 33)--shotgunner
+  TDS:Sell(23, 40, 98, 32)--shotgunner
+  TDS:Sell(45, 40, 98, 32)--shotgunner
+  TDS:Sell(46, 40, 98, 32)--shotgunner
+  TDS:Sell(47, 40, 98, 31)--shotgunner
+  TDS:Sell(48, 40, 98, 31)--shotgunner
+  TDS:Sell(49, 40, 98, 31)--shotgunner
+  TDS:Sell(50, 40, 98, 30)--shotgunner
+  TDS:Sell(34, 40, 98, 30)--shotgunner
+  TDS:Sell(33, 40, 98, 30)--shotgunner
+  TDS:Sell(20, 40, 98, 29)--commander
+  TDS:Sell(36, 40, 98, 29)--shotgunner
+  TDS:Sell(32, 40, 98, 29)--shotgunner
+  TDS:Sell(31, 40, 98, 28)--shotgunner
+  TDS:Sell(40, 40, 98, 28)--shotgunner
+  TDS:Sell(39, 40, 98, 28)--shotgunner
+  TDS:Sell(38, 40, 98, 27)--shotgunner
+  TDS:Sell(37, 40, 98, 27)--shotgunner
+  TDS:Sell(51, 40, 98, 27)--shotgunner
+  TDS:Place('Commander', -17.552337646484375, 0.07500037550926208, 20.817045211791992, 40, 98, 26)--59
+  TDS:Place('Shotgunner', -20.659564971923828, 0.07500037550926208, 20.830718994140625, 40, 98, 26)--60
+  TDS:Place('Shotgunner', -23.761768341064453, 0.07500037550926208, 17.943885803222656, 40, 98, 26)--61
+  TDS:Place('Shotgunner', -14.267580032348633, 0.07500037550926208, 14.605098724365234, 40, 98, 25)--62
+  TDS:Place('Shotgunner', -23.777557373046875, 0.07500037550926208, 14.849693298339844, 40, 98, 25)--63
+  TDS:Place('Shotgunner', -17.397220611572266, 0.07500037550926208, 14.510485649108887, 40, 98, 25)--64
+  TDS:Upgrade(59, 40, 98, 22)--(L) Commander 1
+  TDS:Upgrade(59, 40, 98, 22)--(L) Commander 2
+  TDS:Upgrade(59, 40, 98, 22)--(L) Commander 3
+  TDS:Upgrade(59, 40, 98, 21)--(L) Commander 4
+  TDS:Upgrade(60, 40, 98, 21)--(L) Shotgunner 1 U1
+  TDS:Upgrade(60, 40, 98, 21)--(L) Shotgunner 1 U2
+  TDS:Upgrade(60, 40, 98, 20)--(L) Shotgunner 1 U3
+  TDS:Upgrade(60, 40, 98, 20)--(L) Shotgunner 1 U4
+  TDS:Upgrade(61, 40, 98, 20)--(L) Shotgunner 2 U1
+  TDS:Upgrade(61, 40, 98, 19)--(L) Shotgunner 2 U2
+  TDS:Upgrade(61, 40, 98, 19)--(L) Shotgunner 2 U3
+  TDS:Upgrade(61, 40, 98, 19)--(L) Shotgunner 2 U4
+  TDS:Upgrade(62, 40, 98, 18)--(L) Shotgunner 3 U1
+  TDS:Upgrade(62, 40, 98, 18)--(L) Shotgunner 3 U2
+  TDS:Upgrade(62, 40, 98, 18)--(L) Shotgunner 3 U3
+  TDS:Upgrade(62, 40, 98, 17)--(L) Shotgunner 3 U4
+  TDS:Upgrade(63, 40, 98, 17)--(L) Shotgunner 4 U1
+  TDS:Upgrade(63, 40, 98, 17)--(L) Shotgunner 4 U2
+  TDS:Upgrade(63, 40, 98, 16)--(L) Shotgunner 4 U3
+  TDS:Upgrade(63, 40, 98, 16)--(L) Shotgunner 4 U4
+  TDS:Upgrade(64, 40, 98, 16)--(L) Shotgunner 5 U1
+  TDS:Upgrade(64, 40, 98, 16)--(L) Shotgunner 5 U2
+  TDS:Upgrade(64, 40, 98, 15)--(L) Shotgunner 5 U3
+  TDS:Upgrade(64, 40, 98, 15)--(L) Shotgunner 5 U4
+      end
+      if map == maplist[6] then
+  print([[
+
+--> 1. Tested with Synapse and didn't get any bugs. If you find any let me know on discord.
+--> 2. Make sure to give this strat a thumbs up if you enjoy it!
+Strat by:  		DZ_DasherKTB
+MultiStrat by:  	DZ_DasherKTB
+]])
+local TDS = loadstring(game:HttpGet("https://raw.githubusercontent.com/wxzex/mmsautostratcontinuation/main/autostratscode.txt", true))() 
+TDS:Loadout("Commander", "Ranger", "Accelerator", "Electroshocker", "Farm") 
+TDS:Map("Toyboard", true, "Survival")
+TDS:Mode('Normal')
+task.spawn(function()
+    wait(1)
+    for i,v in pairs(game.CoreGui:GetDescendants()) do
+        if v:IsA("TextLabel") and v.Name == "section_lbl" and v.Text == "" then
+            v.Text = "Strat By: DZ_DasherKTB"
+        end
+    end
+end)
+
+    TDS:Skip(1, 0, 39.4, false)
+    TDS:Place('Electroshocker', 20.92484474182129, 14.738120079040527, 7.678219795227051, 2, 0, 59.0, false, 0, 0, 0, false)
+    TDS:Place('Farm', 30.21083641052246, 14.738120079040527, 1.8362884521484375, 2, 0, 2.2, false, 0, 0, 0, true)
+    TDS:Upgrade(2, 3, 0, 57.2, false)
+    TDS:Place('Farm', 25.91447639465332, 14.738120079040527, -1.0121355056762695, 3, 0, 2.1, false, 0, 0, 0, true)
+    TDS:Upgrade(3, 4, 0, 59.0, false)
+    TDS:Upgrade(3, 4, 0, 2.0, true)
+    TDS:Upgrade(1, 5, 0, 58.1, false)
+    TDS:Place('Farm', 22.801979064941406, 14.738120079040527, -4.684206962585449, 5, 0, 4.4, false, 0, 0, 0, true)
+    TDS:Upgrade(4, 5, 0, 3.4, true)
+    TDS:Place('Farm', 22.514583587646484, 14.738120079040527, 0.31397056579589844, 7, 0, 57.5, false, 0, 0, 0, false)
+    TDS:Upgrade(5, 7, 0, 56.5, false)
+    TDS:Upgrade(5, 7, 0, 56.6, false)
+    TDS:Upgrade(2, 7, 0, 53.6, false)
+    TDS:Place('Farm', 26.38041877746582, 14.738120079040527, 3.076272964477539, 7, 0, 49.1, false, 0, 0, 0, false)
+    TDS:Upgrade(1, 8, 0, 59.3, false)
+    TDS:Upgrade(6, 8, 0, 56.0, false)
+    TDS:Upgrade(6, 8, 0, 55.2, false)
+    TDS:Upgrade(4, 8, 0, 4.4, true)
+    TDS:Place('Farm', 17.9289608001709, 14.738120079040527, -4.443630218505859, 8, 0, 2.4, false, 0, 0, 0, true)
+    TDS:Upgrade(7, 9, 1, 0.5, false)
+    TDS:Upgrade(7, 9, 0, 59.3, false)
+    TDS:Place('Farm', 17.8072452545166, 14.738120079040527, -8.151429176330566, 9, 0, 51.1, false, 0, 0, 0, false)
+    TDS:Upgrade(8, 9, 0, 50.4, false)
+    TDS:Skip(10, 0, 39.1, false)
+    TDS:Place('Accelerator', 9.663606643676758, 14.738120079040527, 10.662490844726562, 11, 1, 0.3, false, 0, 0, 0, false)
+    TDS:Upgrade(9, 11, 0, 51.5, false)
+    TDS:Upgrade(8, 11, 0, 4.4, true)
+    TDS:Place('Farm', 11.850951194763184, 14.738120079040527, -5.46723747253418, 11, 0, 3.5, false, 0, 0, 0, true)
+    TDS:Upgrade(10, 11, 0, 1.1, true)
+    TDS:Upgrade(10, 12, 1, 0.0, true)
+    TDS:Upgrade(10, 12, 0, 58.2, false)
+    TDS:Upgrade(5, 13, 0, 57.2, false)
+    TDS:Upgrade(2, 13, 0, 5.5, false)
+    TDS:Upgrade(2, 13, 0, 4.5, true)
+    TDS:Upgrade(3, 13, 0, 2.2, true)
+    TDS:Upgrade(4, 14, 0, 57.3, false)
+    TDS:Upgrade(8, 14, 0, 55.1, false)
+    TDS:Upgrade(7, 14, 0, 53.1, false)
+    TDS:Skip(14, 0, 38.1, false)
+    TDS:Upgrade(1, 15, 1, 0.4, false)
+    TDS:Upgrade(9, 15, 0, 56.1, false)
+    TDS:Place('Electroshocker', 23.95632553100586, 14.738120079040527, 7.634183883666992, 15, 0, 46.2, false, 0, 0, 0, false)
+    TDS:Upgrade(11, 15, 0, 44.3, false)
+    TDS:Upgrade(11, 15, 0, 4.4, true)
+    TDS:Upgrade(7, 16, 0, 58.4, false)
+    TDS:Upgrade(4, 16, 0, 5.1, false)
+    TDS:Upgrade(11, 17, 1, 0.4, false)
+    TDS:Place('Electroshocker', 21.16130256652832, 14.738120079040527, 4.628172874450684, 17, 0, 3.2, false, 0, 0, 0, true)
+    TDS:Upgrade(12, 17, 0, 2.4, true)
+    TDS:Upgrade(12, 17, 0, 2.5, true)
+    TDS:Upgrade(12, 18, 0, 59.0, false)
+    TDS:Upgrade(7, 18, 0, 4.5, true)
+    TDS:Place('Electroshocker', 20.906160354614258, 14.738120079040527, 14.04991340637207, 19, 0, 53.6, false, 0, 0, 0, false)
+    TDS:Upgrade(13, 19, 0, 51.1, false)
+    TDS:Upgrade(13, 19, 0, 51.6, false)
+    TDS:Upgrade(13, 19, 0, 50.4, false)
+    TDS:Upgrade(3, 19, 0, 3.4, true)
+    TDS:Upgrade(2, 20, 0, 59.4, false)
+    TDS:Upgrade(8, 20, 0, 1.1, true)
+    TDS:Upgrade(8, 20, 0, 1.5, true)
+    TDS:Upgrade(5, 21, 0, 3.2, true)
+    TDS:Upgrade(6, 21, 0, 1.0, true)
+    TDS:Upgrade(6, 22, 1, 0.5, false)
+    TDS:Upgrade(6, 22, 0, 58.2, false)
+    TDS:Skip(22, 0, 39.2, false)
+    TDS:Upgrade(3, 22, 0, 4.3, true)
+    TDS:Upgrade(5, 23, 1, 0.6, false)
+    TDS:Upgrade(1, 23, 0, 56.5, false)
+    TDS:Skip(23, 0, 39.3, false)
+    TDS:Upgrade(4, 23, 0, 3.0, true)
+    TDS:Upgrade(10, 24, 1, 0.4, false)
+    TDS:Upgrade(10, 24, 0, 59.4, false)
+    TDS:Upgrade(12, 24, 0, 53.5, false)
+    TDS:Upgrade(9, 25, 1, 0.4, false)
+    TDS:Upgrade(9, 25, 0, 57.3, false)
+    TDS:Upgrade(11, 26, 1, 0.5, false)
+    TDS:Upgrade(13, 26, 0, 54.2, false)
+    TDS:Upgrade(1, 27, 1, 0.4, false)
+    TDS:Upgrade(12, 27, 0, 3.2, true)
+    TDS:Upgrade(11, 28, 0, 52.2, false)
+    TDS:Upgrade(13, 29, 0, 59.2, false)
+    TDS:Place('Accelerator', 12.900217056274414, 14.738120079040527, 10.777153015136719, 29, 0, 47.4, false, 0, 0, 0, false)
+    TDS:Upgrade(14, 29, 0, 45.5, false)
+    TDS:Upgrade(14, 29, 0, 45.5, false)
+    TDS:Upgrade(14, 29, 0, 3.6, true)
+    TDS:Upgrade(14, 30, 1, 18.0, false)
+    TDS:Place('Accelerator', 12.713380813598633, 14.738120079040527, 7.489299774169922, 30, 1, 12.4, false, 0, 0, 0, false)
+    TDS:Upgrade(15, 30, 1, 9.3, false)
+    TDS:Upgrade(15, 30, 0, 52.4, false)
+    TDS:Upgrade(15, 30, 0, 3.1, true)
+    TDS:Upgrade(15, 31, 1, 19.1, false)
+    TDS:Place('Accelerator', 9.498698234558105, 14.738120079040527, 7.457109451293945, 31, 1, 13.2, false, 0, 0, 0, false)
+    TDS:Upgrade(16, 31, 1, 11.1, false)
+    TDS:Upgrade(16, 31, 1, 9.2, false)
+    TDS:Upgrade(16, 31, 1, 7.6, false)
+    TDS:Upgrade(16, 32, 1, 19.0, false)
+    TDS:Place('Ranger', 3.6588711738586426, 23.000869750976562, 9.94802188873291, 32, 1, 14.1, false, 0, 0, 0, false)
+    TDS:Upgrade(17, 32, 1, 12.3, false)
+    TDS:Upgrade(17, 32, 1, 10.5, false)
+    TDS:Upgrade(17, 33, 1, 17.5, false)
+    TDS:Place('Ranger', 3.9702906608581543, 23.000869750976562, 12.950837135314941, 33, 1, 7.6, false, 0, 0, 0, false)
+    TDS:Upgrade(18, 33, 1, 5.5, false)
+    TDS:Upgrade(18, 33, 1, 3.4, false)
+    TDS:Upgrade(18, 34, 1, 20.5, false)
+    TDS:Place('Ranger', 3.7936453819274902, 23.000869750976562, 16.151737213134766, 34, 1, 10.3, false, 0, 0, 0, false)
+    TDS:Upgrade(19, 34, 1, 8.4, false)
+    TDS:Upgrade(19, 34, 1, 5.3, false)
+    TDS:Upgrade(19, 35, 1, 19.7, false)
+    TDS:Place('Ranger', 3.8567440509796143, 23.000869750976562, 19.481834411621094, 36, 1, 20.0, false, 0, 0, 0, true)
+    TDS:Upgrade(20, 36, 1, 18.1, false)
+    TDS:Upgrade(20, 36, 1, 17.1, false)
+    TDS:Upgrade(20, 36, 1, 15.3, false)
+    TDS:Place('Ranger', 0.8490700721740723, 23.000869750976562, 11.752896308898926, 37, 1, 6.4, false, 0, 0, 0, false)
+    TDS:Upgrade(21, 37, 1, 4.5, false)
+    TDS:Upgrade(21, 37, 1, 3.2, false)
+    TDS:Upgrade(21, 37, 1, 2.6, false)
+    TDS:Place('Ranger', 0.8438277244567871, 23.000869750976562, 14.995749473571777, 37, 0, 54.5, false, 0, 0, 0, false)
+    TDS:Upgrade(22, 37, 0, 51.4, false)
+    TDS:Skip(37, 0, 50.6, false)
+    TDS:Upgrade(22, 37, 0, 5.6, true)
+    TDS:Upgrade(22, 38, 1, 20.4, false)
+    TDS:Skip(38, 0, 52.3, false)
+    TDS:Upgrade(14, 39, 1, 19.3, false)
+    TDS:Skip(39, 0, 51.6, false)
+    TDS:Upgrade(15, 39, 0, 1.5, true)
+    TDS:Upgrade(16, 40, 99, 38.0, false)
+    TDS:Upgrade(9, 40, 99, 12.7, false)
+  end
+end
+
