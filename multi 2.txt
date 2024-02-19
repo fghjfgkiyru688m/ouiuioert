@@ -1,4 +1,4 @@
-local TDS = loadstring(game:HttpGet("https://raw.githubusercontent.com/banbuskox/dfhtyxvzexrxgfdzgzfdvfdz/main/ckmhjvskfkmsStratFun2", true))() 
+local TDS = loadstring(game:HttpGet("https://raw.githubusercontent.com/wxzex/mmsautostratcontinuation/main/autostratscode.txt", true))() 
 TDS:Loadout("DJ Booth", "Commander", "Soldier", "Engineer", "Farm") 
 TDS:Map("Wrecked Battlefield", true, "Survival")
 TDS:Mode('Normal' --[[ !DONT TOUCH! THIS IS CORRECT, IN GAME FILES Molten IS NAMED Normal ]])
@@ -142,7 +142,7 @@ TDS:Upgrade(14, 40, 99, 45.6, false)
 
 
 
-local TDS = loadstring(game:HttpGet("https://raw.githubusercontent.com/banbuskox/dfhtyxvzexrxgfdzgzfdvfdz/main/ckmhjvskfkmsStratFun2", true))() 
+local TDS = loadstring(game:HttpGet("https://raw.githubusercontent.com/wxzex/mmsautostratcontinuation/main/autostratscode.txt", true))() 
 TDS:Loadout("DJ Booth", "Commander", "Soldier", "Engineer", "Farm") 
 TDS:Map("Night Station", true, "Survival")
 TDS:Mode('Normal' --[[ !DONT TOUCH! THIS IS CORRECT, IN GAME FILES Molten IS NAMED Normal ]])
