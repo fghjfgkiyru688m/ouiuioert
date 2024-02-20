@@ -1,7 +1,18 @@
+getgenv().PotatoPC = true
+getgenv().DefaultCam = 1
+
 local TDS = loadstring(game:HttpGet("https://raw.githubusercontent.com/wxzex/mmsautostratcontinuation/main/autostratscode.txt", true))() 
 TDS:Loadout("DJ Booth", "Commander", "Soldier", "Engineer", "Farm") 
 TDS:Map("Wrecked Battlefield", true, "Survival")
-TDS:Mode('Normal' --[[ !DONT TOUCH! THIS IS CORRECT, IN GAME FILES Molten IS NAMED Normal ]])
+TDS:Mode('Normal')
+task.spawn(function()
+    wait(1)
+    for i,v in pairs(game.CoreGui:GetDescendants()) do
+        if v:IsA("TextLabel") and v.Name == "section_lbl" and v.Text == "" then
+            v.Text = "Strat By: Gradymeister#3270"
+        end
+    end
+end)
 TDS:Place('Soldier', 1.7529605627059937, 0.9999394416809082, 33.133262634277344, 0, 0, 14.0, false, 0, 0, 0, false)
 TDS:Upgrade(1, 0, 0, 12.6, false)
 TDS:Place('Soldier', -1.3607232570648193, 0.9999394416809082, 33.427371978759766, 2, 0, 59.0, false, 0, 0, 0, false)
@@ -126,7 +137,7 @@ TDS:Upgrade(20, 38, 1, 9.8, false)
 TDS:Upgrade(1, 39, 1, 4.3, false)
 TDS:Upgrade(4, 39, 0, 56.1, false)
 TDS:Upgrade(13, 40, 99, 49.1, false)
-TDS:Upgrade(14, 40, 99, 45.6, false)
+TDS:Upgrade(14, 40, 99, 45.6, false)]]
 
 
 
@@ -137,7 +148,15 @@ TDS:Upgrade(14, 40, 99, 45.6, false)
 local TDS = loadstring(game:HttpGet("https://raw.githubusercontent.com/wxzex/mmsautostratcontinuation/main/autostratscode.txt", true))() 
 TDS:Loadout("DJ Booth", "Commander", "Soldier", "Engineer", "Farm") 
 TDS:Map("Night Station", true, "Survival")
-TDS:Mode('Normal' --[[ !DONT TOUCH! THIS IS CORRECT, IN GAME FILES Molten IS NAMED Normal ]])
+TDS:Mode('Normal')
+task.spawn(function()
+    wait(1)
+    for i,v in pairs(game.CoreGui:GetDescendants()) do
+        if v:IsA("TextLabel") and v.Name == "section_lbl" and v.Text == "" then
+            v.Text = "Strat By: Gradymeister#3270"
+        end
+    end
+end)
 TDS:Place('Soldier', -2.811490535736084, 0.07500037550926208, -18.299270629882812, 0, 0, 15.8, false, 0, 0, 0, false)
 TDS:Upgrade(1, 0, 0, 11.5, false)
 TDS:Place('Soldier', -3.8847484588623047, 0.07500037550926208, -21.158679962158203, 1, 0, 3.1, false, 0, 0, 0, true)
@@ -260,4 +279,4 @@ TDS:Upgrade(14, 36, 1, 10.1, false)
 TDS:Upgrade(19, 37, 1, 0.0, false)
 TDS:Upgrade(20, 38, 1, 19.6, false)
 TDS:Upgrade(21, 39, 1, 19.6, false)
-TDS:Upgrade(2, 39, 1, 3.0, false)
+TDS:Upgrade(2, 39, 1, 3.0, false) 
