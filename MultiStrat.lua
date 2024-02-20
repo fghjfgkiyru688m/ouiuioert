@@ -1,6 +1,4 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Sigmanic/Strategies-X/main/Loader.lua", true))()
-
---V2.4
+-V2.4
 local TDS = loadstring(game:HttpGet("https://raw.githubusercontent.com/wxzex/mmsautostratcontinuation/main/autostratscode.txt", true))() 
 TDS:Loadout("DJ Booth", "Commander", "Soldier", "Engineer", "Farm") 
 TDS:Map("Wrecked Battlefield", true, "Survival")
