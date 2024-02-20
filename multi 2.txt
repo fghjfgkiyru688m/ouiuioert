@@ -1,3 +1,39 @@
+repeat wait() until game:IsLoaded()
+getgenv().IsMultiStrat = true
+getgenv().Debug = true
+
+getgenv().Maps = {["Wrecked Battlefield"] = {"DJ Booth", "Commander", "Soldier", "Engineer", "Farm"},["Night Station"]={"DJ Booth", "Commander", "Soldier", "Engineer", "Farm"}}--Enter the correct info. Map, then units. If no unit in slot, write, "nil" Follow format to add more maps
+maplist = {"Wrecked Battlefield","Night Station"}
+
+if game.PlaceId == 3260590327 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/banbuskox/dfhtyxvzexrxgfdzgzfdvfdz/main/ckmhjvskfkmsStratFun2", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/banbuskox/dfhtyxvzexrxgfdzgzfdvfdz/main/asjhxnjfdStratFunJoin", true))()
+end
+
+if game.PlaceId == 5591597781 then
+    map = game:GetService("ReplicatedStorage").State.Map.Value
+    game:GetService("Players").PlayerAdded:Connect(function() --back to lobby if it detected player join the game
+        game:GetService("TeleportService"):Teleport(3260590327)
+        wait(10)
+    end)
+    for i,v in pairs(game:GetService("Players"):GetPlayers()) do --back to lobby if there is more than 1 player
+        if i==2 then
+            game:GetService("TeleportService"):Teleport(3260590327)
+            wait(10)
+        end
+    end
+    if not table.find(maplist,map) then --back to lobby in case you joined wrong map
+        game:GetService("TeleportService"):Teleport(3260590327)
+        return
+    end
+    if map == maplist[1] then
+print([[
+
+--> 1. Tested with Synapse and didn't get any bugs. If you find any let me know on discord.
+--> 2. Make sure to give this strat a thumbs up if you enjoy it!
+Strat by:  		DZ_DasherKTB
+MultiStrat by:  	DZ_DasherKTB
+]])
 local TDS = loadstring(game:HttpGet("https://raw.githubusercontent.com/wxzex/mmsautostratcontinuation/main/autostratscode.txt", true))() 
 TDS:Loadout("DJ Booth", "Commander", "Soldier", "Engineer", "Farm") 
 TDS:Map("Wrecked Battlefield", true, "Survival")
@@ -135,13 +171,15 @@ TDS:Upgrade(1, 39, 1, 4.3, false)
 TDS:Upgrade(4, 39, 0, 56.1, false)
 TDS:Upgrade(13, 40, 99, 49.1, false)
 TDS:Upgrade(14, 40, 99, 45.6, false)
+end
+   if map == maplist[2] then
+print([[
 
-
-
-
-
-
-
+--> 1. Tested with Synapse and didn't get any bugs. If you find any let me know on discord.
+--> 2. Make sure to give this strat a thumbs up if you enjoy it!
+Strat by:  		DZ_DasherKTB
+MultiStrat by:  		DZ_DasherKTB
+]])
 local TDS = loadstring(game:HttpGet("https://raw.githubusercontent.com/wxzex/mmsautostratcontinuation/main/autostratscode.txt", true))() 
 TDS:Loadout("DJ Booth", "Commander", "Soldier", "Engineer", "Farm") 
 TDS:Map("Night Station", true, "Survival")
