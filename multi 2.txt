@@ -143,6 +143,8 @@ end
 
 getgenv().PotatoPC = true
 getgenv().DefaultCam = 1
+elseif map == maps[2] then
+maps[2]
 local TDS = loadstring(game:HttpGet("https://raw.githubusercontent.com/wxzex/mmsautostratcontinuation/main/autostratscode.txt", true))() 
 TDS:Loadout("DJ Booth", "Commander", "Soldier", "Engineer", "Farm") 
 TDS:Map("Night Station", true, "Survival")
