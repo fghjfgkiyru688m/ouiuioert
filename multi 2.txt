@@ -1,5 +1,3 @@
-getgenv().PotatoPC = true
-getgenv().DefaultCam = 1
 local TDS = loadstring(game:HttpGet("https://raw.githubusercontent.com/wxzex/mmsautostratcontinuation/main/autostratscode.txt", true))() 
 TDS:Loadout("DJ Booth", "Commander", "Soldier", "Engineer", "Farm") 
 TDS:Map("Wrecked Battlefield", true, "Survival")
@@ -137,12 +135,13 @@ TDS:Upgrade(1, 39, 1, 4.3, false)
 TDS:Upgrade(4, 39, 0, 56.1, false)
 TDS:Upgrade(13, 40, 99, 49.1, false)
 TDS:Upgrade(14, 40, 99, 45.6, false)]]
-end
 
 
 
-getgenv().PotatoPC = true
-getgenv().DefaultCam = 1
+
+
+
+
 elseif map == maps[2] then
 maps[2]
 local TDS = loadstring(game:HttpGet("https://raw.githubusercontent.com/wxzex/mmsautostratcontinuation/main/autostratscode.txt", true))() 
