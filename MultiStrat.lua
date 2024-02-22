@@ -1,3 +1,4 @@
+if map == maps[1] then
 local TDS = loadstring(game:HttpGet("https://raw.githubusercontent.com/wxzex/mmsautostratcontinuation/main/autostratscode.txt", true))() 
 TDS:Loadout("DJ Booth", "Commander", "Soldier", "Engineer", "Farm") 
 TDS:Map("Wrecked Battlefield", true, "Survival")
@@ -128,7 +129,7 @@ TDS:Upgrade(4, 39, 0, 56.1, false)
 TDS:Upgrade(13, 40, 99, 49.1, false)
 TDS:Upgrade(14, 40, 99, 45.6, false)
 
-
+elseif map == maps[2] then
 local TDS = loadstring(game:HttpGet("https://raw.githubusercontent.com/wxzex/mmsautostratcontinuation/main/autostratscode.txt", true))() 
 TDS:Loadout("DJ Booth", "Commander", "Soldier", "Engineer", "Farm") 
 TDS:Map("Night Station", true, "Survival")
