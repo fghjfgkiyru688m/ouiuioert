@@ -1,6 +1,6 @@
 --V0.2 alpha
---local TDS = loadstring(game:HttpGet("https://raw.githubusercontent.com/banbuskox/dfhtyxvzexrxgfdzgzfdvfdz/main/ckmhjvskfkmsStratFun2", true))() --fork repo
-local TDS = loadstring(game:HttpGet("https://raw.githubusercontent.com/banbuskox/dfhtyxvzexrxgfdzgzfdvfdz/main/ckmhjvskfkmsStratFun2", true))() 
+--local TDS = loadstring(game:HttpGet("https://raw.githubusercontent.com/DEVIX7/Strategies-X/main/MainSource.lua", true))() --fork repo
+local TDS = loadstring(game:HttpGet("https://raw.githubusercontent.com/Sigmanic/Strategies-X/main/MainSource.lua", true))() 
 TDS:Loadout("Warden", "Shotgunner", "DJ Booth", "Commander", "Farm") 
 TDS:Map("Stained Temple", true, "Survival")
 TDS:Mode('Normal' --[[ !DONT TOUCH! THIS IS CORRECT, IN GAME FILES Molten IS NAMED Normal ]])
