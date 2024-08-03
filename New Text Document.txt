@@ -1,4 +1,4 @@
-local averageGameTime = 14 --In minutes
+local averageGameTime = 12 --In minutes
 
 local function SendWebHook(reason, url) --Remind me to make a loadstring to handle all of these when I make autostratX lol
 	if not url and isfile('TDS_AutoStrat\\Webhook (Logs).txt') then
